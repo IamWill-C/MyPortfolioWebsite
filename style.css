@@ -13,8 +13,29 @@ body {
 .logo img {
     padding-top: 10px;
     padding-left: 10px;
+    padding-right: 10px;
     width: 200px;
-    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+h2 {
+    font-family: video-light;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+}
+
+h3 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+
+h4 {
+    font-family: Montserrat;
+    font-size: 18px;
+    margin: 0;
 }
 
 .hamburger {
@@ -101,7 +122,7 @@ body {
         margin-left: 0; /* 👈 remove the auto margin on mobile */
     }
 
-    .social-icon {
+    .social-icon .footer-social-icon {
         font-size: 50px !important;
         padding: 0px 15px;
     }
@@ -114,6 +135,10 @@ body {
     }
 
     .social-icon svg {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    .footer-social-icon svg {
         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
@@ -156,8 +181,8 @@ body {
 /*Site Navigation Style End*/
 /*Social Icon Style*/
     .social-icon {
-        font-size: 30px;
-        padding: 5px;
+        font-size: 50px;
+        padding: 10px;
     }
 
     .social-icon svg {
@@ -181,7 +206,7 @@ body {
 
     .social {
     margin-left: auto;
-    padding-right: 8px;
+    padding-right: 20px;
     }
 /*Social Icon Style End*/
 /*Site Navigation Style*/
@@ -198,10 +223,10 @@ body {
     }
 
     .nav-link {
-        font-family: Fredoka;
+        font-family: Video-light;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 30px;
         text-align: center;
         letter-spacing: 1px;
         overflow: hidden;
@@ -247,11 +272,6 @@ body {
         padding: 15px;
     }
 
-
-
-
-
-
 /*Footer Style*/
     footer {
     background: linear-gradient(to bottom, #008192, #92f1ff);
@@ -264,6 +284,12 @@ body {
         max-width: 200px;
     }
 
+    .footer-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    }
+
     .footer-nav ul {
     display: flex;
     list-style: none;
@@ -272,7 +298,7 @@ body {
     }
 
     .footer-nav ul li a {
-        font-size: 20px;
+        font-size: 30px;
         position: relative;
         z-index: 0;
         color: rgb(255, 255, 255);
@@ -297,6 +323,14 @@ body {
     .footer-nav ul {
     display: flex;
     list-style: none;
+    }
+
+    .footer-text h3 {
+        padding-top: 5px;
+    }
+
+    .footer-text h4 {
+        font-weight: semi-bold;
     }
 
     .footer-text {
@@ -342,6 +376,11 @@ body {
         font-style: italic;
     }
 
+    .footer-italic a {
+        color: white;
+
+    }
+
     .footer-pad {
         padding-bottom: 30px;
     }
@@ -351,4 +390,23 @@ body {
     list-style: none;
     padding-top: 10px;
     }
+
+    .footer-social-icon svg {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    .footer-social-icon {
+        font-size: 40px;
+        padding: 5px;
+    }
+
+    .footer-social-icon a {
+        color: white;
+        transition: color 0.3s;
+    }
+
+    .footer-social-icon a:hover {
+    color: rgb(164, 164, 164); 
+    }
+
 /*Footer Style End*/
