@@ -20,8 +20,17 @@ body {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 200px;
+    width: 100px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+strong {
+    font-weight: bold;
+}
+
+p {
+    font-family: Montserrat;
+    line-height: 1.5;
 }
 
 h2 {
@@ -242,7 +251,7 @@ h4 {
 /*Site Navigation Style End*/
 /*Social Icon Style*/
     .social-icon {
-        font-size: 50px;
+        font-size: 40px;
         padding: 10px;
     }
 
@@ -484,6 +493,346 @@ h4 {
         }
     /*Bottom Navigation End*/
 /*Portfolio Page Style End*/
+/*About Page Style*/
+    .about-section {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .about-intro {
+        text-align: center;
+    }
+
+    .about-intro h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .about-intro p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .headshot-pic {
+        width: 300px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #008192;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .about-section h5, .about-skills h5, .about-experience h5 {
+        font-family: video-light;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .about-block {
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .about-skills, .about-experience {
+        font-family: Montserrat;
+        flex: 1;
+    }
+
+    .about-skills {
+        padding-right: 10px;
+    }
+
+    .skills-experience-divider {
+        height: 300px;
+        width: 1px;
+        border: 1px solid #008192;
+        border-radius: 5px;
+        color: #008192;
+        background: #008192;
+    }
+
+    .about-experience {
+        padding-left: 10px;
+    }
+
+    .skills-list ul li, .experience-list ul li {
+        line-height: 1.6;
+    }
+
+    .experience-date {
+        font-style: italic;
+        padding-left: 10px;
+    }
+
+    .skills-experience-grid {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .about-nav-link {
+    color: #008192;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: none;
+    }
+
+    .about-nav-link:hover {
+    text-decoration: underline;
+    color: #92f1ff;
+    transition: color 0.3s;
+    }
+
+    .about-line-break {
+        border: 2px solid #008192;
+        border-radius: 5px;
+        color: #008192;
+        margin: 20px 0;
+    }
+
+    .hobbies-list {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .hobbies-list ul li {
+        font-size: 14px;
+        font-family: Montserrat;
+        line-height: 1.6;
+        list-style: disc;
+        margin-left: 20px;
+    }
+
+    .about-cats p {
+        padding-bottom: 20px;
+    }
+
+    .cat-gallery {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cat-pic {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 30px;
+        border: 5px solid #008192;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .cat-pic:hover {
+        transform: scale(1.05);
+    }
+
+    .cat-item p {
+        text-align: center;
+        margin-top: 10px;
+        font-family: video-light;
+        font-size: 30px;
+        border: 3px solid #92f1ff;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.15);
+        padding: 5px 0px;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .lightbox {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .lightbox.open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .lightbox-img {
+        max-width: 90%;
+        max-height: 90vh;
+        border-radius: 10px;
+        border: 5px solid #ffffff;
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+    }
+
+    .lightbox.open .lightbox-img {
+        transform: scale(1);
+    }
+
+    .pet-footer {
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: italic;
+        padding-top: 20px;
+    }
+/*About Page Style End*/
+/*Contact Page Style*/
+    .contact-section {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px 20px 0px 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .contact-title {
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .contact-intro {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: opacity 0.5s ease;
+    }
+
+    .contact-form.fade-out {
+        opacity: 0;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-group label {
+        font-family: video-light;
+        font-size: 30px;
+    }
+
+    .form-group input, .form-group textarea {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid #008192;
+        border-radius: 10px;
+        padding: 12px 15px;
+        color: white;
+        font-family: Montserrat;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s, background 0.3s;
+    }
+
+    .form-group input::placeholder, .form-group textarea::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .submit-btn {
+        background: #008192;
+        color: white;
+        border-radius: 10px;
+        padding: 15px 30px;
+        font-family: video-light;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+        align-self: center;
+        width: 200px;
+        border: 2px solid white;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .submit-btn:hover {
+        background: rgba(0, 129, 146, 0.7);
+        transform: scale(1.05);
+    }
+
+    input:invalid, textarea:invalid {
+        border-color: rgba(255, 0, 0, 0.3);
+    }
+
+    .form-success {
+        display: block;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        background: rgba(0, 129, 146, 0.3);
+        border: 2px solid #008192;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .form-success.show {
+        display: block;
+        opacity: 1;
+    }
+/*Contact Page Style End*/
+/*Showcase Pages*/
+
+    .showcase {
+        padding-top: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .showcase img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: auto;
+        border: 5px solid #008192;
+        border-radius: 30px;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease;
+    }
+
+    .showcase img:hover {
+        transform: scale(1.05);
+    }
+
+    .showcase-img-text {
+        text-align: center;
+        font-family: video-light;
+        font-size: 40px;
+        padding: 10px 0px;
+    }
 /*Footer Style*/
     .line-break-footer {
         border: 2px solid #008192;
