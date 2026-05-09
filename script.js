@@ -60,8 +60,6 @@ if (form) {
         if (response.ok) {
             form.reset();
             form.classList.add('fade-out');
-            document.querySelector('.contact-title').style.display = 'none';
-            document.querySelector('.contact-intro').style.display = 'none';
             document.querySelector('.contact-header').classList.add('fade-out');
             setTimeout(() => {
                 form.style.display = 'none';
@@ -71,5 +69,21 @@ if (form) {
                 }, 10);
             }, 500);
         }
+    });
+}
+
+// Accordion
+const accordionBtns = document.querySelectorAll('.accordion-btn');
+if (accordionBtns.length > 0) {
+    accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const iframe = content.querySelector('iframe');
+            if (!content.classList.contains('open') && iframe) {
+                iframe.src = iframe.dataset.src;
+            }
+            btn.classList.toggle('open');
+            content.classList.toggle('open');
+        });
     });
 }
