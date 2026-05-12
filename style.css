@@ -872,7 +872,6 @@ h4 {
     border: 2px solid #008192;
     border-radius: 10px;
     margin-bottom: 15px;
-    overflow: hidden;
 }
 
 .accordion-btn {
@@ -890,6 +889,8 @@ h4 {
     justify-content: space-between;
     align-items: center;
     transition: background 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .accordion-btn:hover {
@@ -899,6 +900,7 @@ h4 {
 .accordion-btn.open {
     background: rgba(0, 129, 146, 0.4);
     border-bottom: 2px solid #008192;
+    border-radius: 10px 10px 0 0;
 }
 
 .accordion-icon {
@@ -919,6 +921,7 @@ h4 {
 .accordion-content.open {
     max-height: 5000px;
     padding: 20px;
+    overflow: visible;
 }
 
 
@@ -970,6 +973,7 @@ h4 {
         border-radius: 10px;
         padding: 20px;
         box-sizing: border-box;
+        top: 200px;
     }
 
     .project-sidebar h5 {
