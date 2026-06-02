@@ -1007,6 +1007,26 @@ h4 {
         padding-bottom: 0;
     }
 
+.sketchfab-text {
+    font-family: Montserrat;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(239, 253, 255, 0.5);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-shadow: none;
+}
+
+.sketchfab-link {
+    color: #008192;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sketchfab-link:hover {
+    color: #92f1ff;
+}
 /* Section titles */
     .project-section-title {
         font-family: video-light;
