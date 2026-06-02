@@ -1099,6 +1099,9 @@ h4 {
         font-size: 16px;
         line-height: 1.8;
         margin-bottom: 20px;
+        background-color: #008192;
+        padding: 20px;
+        border-radius: 10px;
     }
 /* Project Page Styles End*/
 /*Footer Style*/
