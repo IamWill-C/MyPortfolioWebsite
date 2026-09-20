@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
@@ -22,6 +23,7 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
         <header class="site-nav">
                 <div class="logo">
                     <a href="index.html"><img src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" width="400" height="400"></a>
@@ -29,7 +31,7 @@
             <nav class="nav" id="nav">
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
-                    <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-link"><a href="portfolio.html" aria-current="page">Portfolio</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -47,14 +49,15 @@
                 <span></span>
             </button>
         </header>
+        <main id="main">
         <section class="home-content">
             <div class="home-intro">
                 <h1>
                     Will Clevenger
                 </h1>
-                <h3>
+                <p class="home-tagline">
                     3D Artist specializing in Environment Art and Prop Modeling | VFX Artist | Lighting Artist | Web Developer
-                </h3>
+                </p>
             </div>
             <hr class="line-break">
             <div>
@@ -64,19 +67,19 @@
             </div>
             <div class="featured-work portfolio-grid">
                 <div class="featured-item">
-                    <a href="environment-art.html"><img src="Images/site/ComingSoon.webp" alt="Featured Work 1"></a>
+                    <a href="environment-art.html"><img src="Images/site/ComingSoon.webp" alt="View Environment Art projects"></a>
                     <h3 class="featured-item-title">Environment Art</h3>
                 </div>
                 <div class="featured-item">
-                    <a href="prop-modeling.html"><img src="Images/site/ComingSoon.webp" alt="Featured Work 2"></a>
+                    <a href="prop-modeling.html"><img src="Images/site/ComingSoon.webp" alt="View Prop Modeling projects"></a>
                     <h3 class="featured-item-title">Prop Modeling</h3>
                 </div>
                 <div class="featured-item">
-                    <a href="vfx-art.html"><img src="Images/site/ComingSoon.webp" alt="Featured Work 3"></a>
+                    <a href="vfx-art.html"><img src="Images/site/ComingSoon.webp" alt="View VFX Art projects"></a>
                     <h3 class="featured-item-title">VFX Art</h3>
                 </div>
                 <div class="featured-item">
-                    <a href="lighting-art.html"><img src="Images/site/ComingSoon.webp" alt="Featured Work 4"></a>
+                    <a href="lighting-art.html"><img src="Images/site/ComingSoon.webp" alt="View Lighting Art projects"></a>
                     <h3 class="featured-item-title">Lighting Art</h3>
                 </div>
             </div>
@@ -85,11 +88,13 @@
 
 
 
+        </main>
+
         <footer>
         <nav class="footer-nav">
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
-                <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a href="portfolio.html" aria-current="page">Portfolio</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
@@ -98,16 +103,16 @@
         <div class="footer-text">
             <div class="footer-left">
                 <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
-                <h3>Will Clevenger</h3>
+                <p class="footer-name">Will Clevenger</p>
                 <br>
-                <h4>3D Artist</h4>
+                <p class="footer-role">3D Artist</p>
                 <br>
                 <br>
             </div>
             <div class="footer-right">
                 <h2 class="footer-bold">Contact</h2>
                 <br>
-                <h3 class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></h3>
+                <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
                 <div class="footer-social">
                 <ul>
                     <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>

@@ -8,6 +8,16 @@
 
 :root {
     --header-h: 120px;
+
+    --bg-top: #92f1ff;
+    --bg-bottom: #008192;
+    --panel: #006b7a;
+    --accent: #92f1ff;
+
+    /* Frosted panel behind white text. The tint is what gives contrast (white on it is 5.5:1 or better,
+       even over the palest part of the page), so text stays readable if backdrop-filter isn't supported. */
+    --glass: rgba(0, 60, 70, 0.7);
+    --glass-blur: blur(10px);
 }
 
 html {
@@ -16,12 +26,62 @@ html {
 
 body {
     color: rgb(255, 255, 255);
-    background: linear-gradient(to bottom, #92f1ff, #008192);
+    background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
     background-attachment: scroll;
     min-height: 100vh;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
+}
+
+/* Every element that uses background: var(--glass) also gets the blur */
+.site-nav,
+.sub-nav,
+footer,
+.home-content,
+.about-section,
+.about-block,
+.contact-section,
+.accordion,
+.showcase-img-text,
+.page-nav-prev,
+.page-nav-next {
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+}
+
+main {
+    display: block;
+    scroll-margin-top: var(--header-h);
+}
+
+/* Skip link: hidden until a keyboard user tabs to it */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 16px;
+    z-index: 10000;
+    background: #ffffff;
+    color: #00262d;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+/* Visible keyboard focus: white ring with a dark inner edge so it shows on light and dark backgrounds */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px #001e24;
 }
 
 strong {
@@ -50,6 +110,16 @@ p {
     line-height: 1.5;
 }
 
+/* reset.css sets line-height: 1, which crowds headings that wrap onto two lines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25;
+}
+
 h1,
 h2 {
     font-family: video-light, sans-serif;
@@ -73,9 +143,9 @@ h4 {
 
 .line-break {
     width: 90%;
-    border: 2px solid #008192;
+    border: 2px solid var(--accent);
     border-radius: 5px;
-    color: #008192;
+    color: var(--accent);
     margin: 20px 0;
 }
 

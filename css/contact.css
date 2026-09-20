@@ -4,10 +4,12 @@
 
     .contact-section {
         max-width: 700px;
-        margin: 0 auto;
-        padding: 20px 20px 0px 20px;
+        margin: 20px auto;
+        padding: 20px;
         box-sizing: border-box;
-        width: 100%;
+        width: calc(100% - 32px);
+        background: var(--glass);
+        border-radius: 16px;
     }
 
     .contact-title {
@@ -19,6 +21,9 @@
     .contact-intro {
         text-align: center;
         font-size: 18px;
+        max-width: 60ch;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
     }
 
@@ -45,28 +50,27 @@
     }
 
     .form-group input, .form-group textarea {
-        background: rgba(255, 255, 255, 0.2);
-        border: 2px solid #008192;
+        background: rgba(0, 0, 0, 0.2);
+        border: 2px solid var(--accent);
         border-radius: 10px;
         padding: 12px 15px;
         color: white;
         font-family: Montserrat, sans-serif;
         font-size: 16px;
-        outline: none;
         transition: border-color 0.3s, background 0.3s;
     }
 
     .form-group input::placeholder, .form-group textarea::placeholder {
-        color: rgba(255, 255, 255, 0.6);
+        color: #cdeef3;
     }
 
     .form-group input:focus, .form-group textarea:focus {
         border-color: white;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.3);
     }
 
     .submit-btn {
-        background: #008192;
+        background: var(--panel);
         color: white;
         border-radius: 10px;
         padding: 15px 30px;
@@ -82,20 +86,21 @@
     }
 
     .submit-btn:hover {
-        background: rgba(0, 129, 146, 0.7);
+        background: #005a67;
         transform: scale(1.05);
     }
 
-    input:invalid, textarea:invalid {
-        border-color: rgba(255, 0, 0, 0.3);
+    /* :user-invalid only applies after the person has interacted, unlike :invalid which flags empty required fields on load */
+    input:user-invalid, textarea:user-invalid {
+        border-color: #ffb3b3;
     }
 
     .form-success {
         display: none;
         opacity: 0;
         transition: opacity 0.5s ease;
-        background: rgba(0, 129, 146, 0.3);
-        border: 2px solid #008192;
+        background: rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent);
         border-radius: 10px;
         padding: 20px;
         text-align: center;

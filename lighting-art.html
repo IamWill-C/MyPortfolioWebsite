@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
@@ -21,6 +22,7 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
         <header class="site-nav">
                 <div class="logo">
                     <a href="index.html"><img src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" width="400" height="400"></a>
@@ -28,7 +30,7 @@
             <nav class="nav" id="nav">
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
-                    <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -51,9 +53,10 @@
                 <li><a href="environment-art.html">Environment</a></li>
                 <li><a href="prop-modeling.html">Props</a></li>
                 <li><a href="vfx-art.html">VFX</a></li>
-                <li><a href="lighting-art.html" class="active">Lighting</a></li>
+                <li><a href="lighting-art.html" class="active" aria-current="page">Lighting</a></li>
             </ul>
         </nav>
+        <main id="main">
         <h1 class="sr-only">Lighting Art</h1>
         <div class="showcase">
             <img src="Images/site/ComingSoon.webp" alt="Lighting Art Showcase">
@@ -62,7 +65,7 @@
         <div class="accordion">
             <button class="accordion-btn">
                 Project #1
-                <span class="accordion-icon">+</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
                 <!-- 1. Hero / Beauty Shot -->
@@ -135,7 +138,7 @@
                     </div>
                     <!-- 5. Sidebar Specs -->
                     <aside class="project-sidebar">
-                        <h5>Project Specs</h5>
+                        <h3>Project Specs</h3>
                         <ul class="specs-list">
                             <li><strong>Software:</strong> Unreal Engine 5, Maya</li>
                             <li><strong>Lighting Type:</strong> Dynamic / Baked / Mixed</li>
@@ -152,7 +155,7 @@
         <div class="accordion">
             <button class="accordion-btn">
                 Project #2
-                <span class="accordion-icon">+</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
                 <!-- 1. Hero / Beauty Shot -->
@@ -225,7 +228,7 @@
                     </div>
                     <!-- 5. Sidebar Specs -->
                     <aside class="project-sidebar">
-                        <h5>Project Specs</h5>
+                        <h3>Project Specs</h3>
                         <ul class="specs-list">
                             <li><strong>Software:</strong> Unreal Engine 5, Maya</li>
                             <li><strong>Lighting Type:</strong> Dynamic / Baked / Mixed</li>
@@ -242,7 +245,7 @@
         <div class="accordion">
             <button class="accordion-btn">
                 Project #3
-                <span class="accordion-icon">+</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
                 <!-- 1. Hero / Beauty Shot -->
@@ -315,7 +318,7 @@
                     </div>
                     <!-- 5. Sidebar Specs -->
                     <aside class="project-sidebar">
-                        <h5>Project Specs</h5>
+                        <h3>Project Specs</h3>
                         <ul class="specs-list">
                             <li><strong>Software:</strong> Unreal Engine 5, Maya</li>
                             <li><strong>Lighting Type:</strong> Dynamic / Baked / Mixed</li>
@@ -330,18 +333,20 @@
             </div>
         </div>
         <!-- Lightbox: one shared instance for every project on this page -->
-        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer. Press Escape to close." tabindex="-1">
             <img class="lightbox-img" id="lightbox-img" alt="">
         </div>
         <div class="page-nav">
             <a href="vfx-art.html" class="page-nav-next">← VFX</a>
             <a href="environment-art.html" class="page-nav-prev">Environment →</a>
         </div>
+        </main>
+
         <footer>
         <nav class="footer-nav">
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
-                <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
@@ -350,16 +355,16 @@
         <div class="footer-text">
             <div class="footer-left">
                 <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
-                <h3>Will Clevenger</h3>
+                <p class="footer-name">Will Clevenger</p>
                 <br>
-                <h4>3D Artist</h4>
+                <p class="footer-role">3D Artist</p>
                 <br>
                 <br>
             </div>
             <div class="footer-right">
                 <h2 class="footer-bold">Contact</h2>
                 <br>
-                <h3 class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></h3>
+                <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
                 <div class="footer-social">
                 <ul>
                     <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>

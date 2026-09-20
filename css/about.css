@@ -5,9 +5,11 @@
     .about-section {
         padding: 20px;
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 20px auto;
         box-sizing: border-box;
-        width: 100%;
+        width: calc(100% - 32px);
+        background: var(--glass);
+        border-radius: 16px;
     }
 
     .about-intro {
@@ -23,7 +25,8 @@
     .about-intro p {
         font-size: 18px;
         line-height: 1.6;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
+        max-width: 65ch;
         font-weight: 500;
     }
 
@@ -31,11 +34,11 @@
         width: 300px;
         height: auto;
         border-radius: 50%;
-        border: 5px solid #008192;
+        border: 5px solid var(--accent);
         filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
     }
 
-    .about-section h5, .about-skills h5, .about-experience h5 {
+    .about-section h2, .about-skills h2, .about-experience h2 {
         font-family: video-light, sans-serif;
         font-size: 30px;
         font-weight: bold;
@@ -43,7 +46,11 @@
     }
 
     .about-block {
-        background: rgba(0, 0, 0, 0.15);
+        background: var(--glass);
+        max-width: 1000px;
+        margin: 20px auto;
+        width: calc(100% - 32px);
+        border-radius: 16px;
     }
 
     .about-skills, .about-experience {
@@ -58,10 +65,10 @@
     .skills-experience-divider {
         height: 300px;
         width: 1px;
-        border: 1px solid #008192;
+        border: 1px solid var(--accent);
         border-radius: 5px;
-        color: #008192;
-        background: #008192;
+        color: var(--accent);
+        background: var(--accent);
     }
 
     .about-experience {
@@ -87,23 +94,24 @@
         width: 100%;
     }
 
+    /* Links in body copy stay underlined so they don't rely on colour alone */
     .about-nav-link {
-    color: #008192;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     font-weight: bold;
-    text-shadow: none;
     }
 
     .about-nav-link:hover {
-    text-decoration: underline;
-    color: #92f1ff;
+    color: #ffffff;
+    text-decoration-thickness: 3px;
     transition: color 0.3s;
     }
 
     .about-line-break {
-        border: 2px solid #008192;
+        border: 2px solid var(--panel);
         border-radius: 5px;
-        color: #008192;
+        color: var(--panel);
         margin: 20px 0;
     }
 
@@ -116,7 +124,7 @@
     }
 
     .hobbies-list ul li {
-        font-size: 14px;
+        font-size: 16px;
         font-family: Montserrat, sans-serif;
         line-height: 1.6;
         list-style: disc;
@@ -139,7 +147,7 @@
         height: 280px;
         object-fit: cover;
         border-radius: 30px;
-        border: 5px solid #008192;
+        border: 5px solid var(--accent);
         filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
         transition: transform 0.3s ease;
         cursor: pointer;
@@ -164,7 +172,7 @@
     .pet-footer {
         text-align: center;
         font-family: Montserrat, sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-style: italic;
         padding-top: 20px;
     }

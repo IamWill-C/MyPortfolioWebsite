@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
@@ -21,6 +22,7 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
         <header class="site-nav">
                 <div class="logo">
                     <a href="index.html"><img src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" width="400" height="400"></a>
@@ -28,7 +30,7 @@
             <nav class="nav" id="nav">
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
-                    <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -49,11 +51,12 @@
         <nav class="sub-nav">
             <ul>
                 <li><a href="environment-art.html">Environment</a></li>
-                <li><a href="prop-modeling.html" class="active">Props</a></li>
+                <li><a href="prop-modeling.html" class="active" aria-current="page">Props</a></li>
                 <li><a href="vfx-art.html">VFX</a></li>
                 <li><a href="lighting-art.html">Lighting</a></li>
             </ul>
         </nav>
+        <main id="main">
         <h1 class="sr-only">Prop Modeling</h1>
         <div class="showcase">
             <!-- <img src="Images/site/ComingSoon.webp" alt="Prop Art Showcase"> -->
@@ -62,12 +65,12 @@
         <div class="accordion">
             <button class="accordion-btn">
                 Pirate Cutlass
-                <span class="accordion-icon">+</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
                 <!-- 1. Hero / Beauty Shot -->
                 <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Scene001.webp" alt="Pirate Cutlass Beauty Shot">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Scene001.webp" alt="Render of the Pirate Cutlass, a curved blade with a brown wrapped grip and hand guard, lit against a dark grey backdrop">
                     <h2 class="project-hero-title">Pirate Cutlass</h2>
                 </section>
 
@@ -108,19 +111,19 @@
                         <h3 class="project-section-title">Technical Breakdown</h3>
                         <div class="breakdown-grid">
                             <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Wireframe001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Wireframe001.webp" alt="Wireframe" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Wireframe001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Wireframe001.webp" alt="Wireframe view of the Pirate Cutlass showing its low poly topology" data-lightbox>
                                 <p>Wireframe / Topology</p>
                             </div>
                             <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_ZBrush001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_ZBrush001.webp" alt="High Poly" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_ZBrush001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_ZBrush001.webp" alt="High poly ZBrush sculpt of the Pirate Cutlass" data-lightbox>
                                 <p>High Poly Sculpt</p>
                             </div>
                             <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001.webp" alt="Low Poly" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001.webp" alt="Game-ready low poly Pirate Cutlass with textures applied" data-lightbox>
                                 <p>Game-Ready Low Poly</p>
                             </div>
                             <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/Cutlass_Textures_800.webp" data-full="Images/Renders/PropArt/Cutlass/Cutlass_Textures.webp" alt="Texture Maps" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/Cutlass_Textures_800.webp" data-full="Images/Renders/PropArt/Cutlass/Cutlass_Textures.webp" alt="Albedo, normal, roughness and metalness texture maps for the Pirate Cutlass" data-lightbox>
                                 <p>Texture Maps (Albedo / Normal / Roughness / Metalness)</p>
                             </div>
                         </div>
@@ -129,15 +132,15 @@
                         <h3 class="project-section-title">Detail Shots</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001.webp" alt="Detail Shot 1" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001.webp" alt="Full view of the Pirate Cutlass at an angle, blade pointing up and to the right" data-lightbox>
                                 <p>Detail Area 1</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty002_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty002.webp" alt="Detail Shot 2" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty002_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty002.webp" alt="Close-up of the cutlass grip, a wooden handle wrapped in rope inside a glossy brown hand guard" data-lightbox>
                                 <p>Detail Area 2</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty003_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty003.webp" alt="Detail Shot 3" data-lightbox>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty003_800.webp" data-full="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty003.webp" alt="Close-up of the cutlass blade tip and worn, chipped edge in dramatic low light" data-lightbox>
                                 <p>Detail Area 3</p>
                             </div>
                         </div>
@@ -146,7 +149,7 @@
 
                     <!-- 5. Sidebar Specs -->
                     <aside class="project-sidebar">
-                        <h5>Project Specs</h5>
+                        <h3>Project Specs</h3>
                         <ul class="specs-list">
                             <li><strong>Software:</strong> ZBrush, Maya, Substance Painter</li>
                             <li><strong>Poly Count:</strong> 4,832 Tris | 2,456 Polys</li>
@@ -162,7 +165,7 @@
         <div class="accordion">
             <button class="accordion-btn">
                 Project #2
-                <span class="accordion-icon">+</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
                 <!-- 1. Hero / Beauty Shot -->
@@ -186,7 +189,7 @@
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
                             <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
+                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
                         </div>
 
                         <!-- 3. Technical Breakdown -->
@@ -231,7 +234,7 @@
 
                     <!-- 5. Sidebar Specs -->
                     <aside class="project-sidebar">
-                        <h5>Project Specs</h5>
+                        <h3>Project Specs</h3>
                         <ul class="specs-list">
                             <li><strong>Software:</strong> MS Paint</li>
                             <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
@@ -247,7 +250,7 @@
         <div class="accordion">
             <button class="accordion-btn">
                 Project #3
-                <span class="accordion-icon">+</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
                 <!-- 1. Hero / Beauty Shot -->
@@ -271,7 +274,7 @@
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
                             <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
+                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
                         </div>
 
                         <!-- 3. Technical Breakdown -->
@@ -316,7 +319,7 @@
 
                     <!-- 5. Sidebar Specs -->
                     <aside class="project-sidebar">
-                        <h5>Project Specs</h5>
+                        <h3>Project Specs</h3>
                         <ul class="specs-list">
                             <li><strong>Software:</strong> MS Paint</li>
                             <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
@@ -330,18 +333,20 @@
             </div>
         </div>
         <!-- Lightbox: one shared instance for every project on this page -->
-        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer. Press Escape to close." tabindex="-1">
             <img class="lightbox-img" id="lightbox-img" alt="">
         </div>
         <div class="page-nav">
             <a href="environment-art.html" class="page-nav-prev">← Environment</a>
             <a href="vfx-art.html" class="page-nav-next">VFX →</a>
         </div>
+        </main>
+
         <footer>
         <nav class="footer-nav">
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
-                <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
@@ -350,16 +355,16 @@
         <div class="footer-text">
             <div class="footer-left">
                 <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
-                <h3>Will Clevenger</h3>
+                <p class="footer-name">Will Clevenger</p>
                 <br>
-                <h4>3D Artist</h4>
+                <p class="footer-role">3D Artist</p>
                 <br>
                 <br>
             </div>
             <div class="footer-right">
                 <h2 class="footer-bold">Contact</h2>
                 <br>
-                <h3 class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></h3>
+                <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
                 <div class="footer-social">
                 <ul>
                     <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>

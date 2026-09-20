@@ -36,12 +36,14 @@
     }
 
     .social-icon a {
+        display: inline-block;
         color: white;
-        transition: color 0.3s;
+        transition: color 0.3s, transform 0.2s ease;
     }
 
     .social-icon a:hover {
-    color: rgb(164, 164, 164); 
+    color: var(--accent);
+    transform: translateY(-2px) scale(1.1);
     }
 
     .social ul {
@@ -62,9 +64,8 @@
     .site-nav {
     display: flex;
     align-items: center;
-    border-bottom: 2px #008192;
-    border-style: solid;
-    background: linear-gradient(to bottom, #92f1ff, #008192);
+    border-bottom: 2px solid var(--accent);
+    background: var(--glass);
     padding-bottom: 5px;
     position: sticky;
     z-index: 100;
@@ -92,26 +93,76 @@
     align-items: center;
     }
 
-    .nav ul li a {
+    /* Nav hover (header and footer): a frosted pill fades in, the text turns cyan and a cyan bar grows out from the centre */
+    .nav ul li a,
+    .footer-nav ul li a {
         position: relative;
         z-index: 0;
         color: rgb(255, 255, 255);
         white-space: nowrap;
+        transition: color 0.25s ease;
     }
 
-    .nav ul li a::before { /*On Hover*/
+    .nav ul li a::before,
+    .footer-nav ul li a::before {
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(to bottom, #494949, #008192);
-        opacity: 0;
-        transition: opacity 0.3s;
         z-index: -1;
-        border-radius: 5px;
+        border-radius: 8px;
+        background: rgba(0, 30, 38, 0.45);
+        box-shadow: inset 0 0 0 1px rgba(146, 241, 255, 0.4);
+        opacity: 0;
+        transform: scale(0.92);
+        transition: opacity 0.25s ease, transform 0.25s ease;
     }
 
-    .nav ul li:hover a::before { /*After Hover*/
+    .nav ul li a::after,
+    .footer-nav ul li a::after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 8px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .nav ul li a:hover,
+    .nav ul li a:focus-visible,
+    .footer-nav ul li a:hover,
+    .footer-nav ul li a:focus-visible {
+        color: var(--accent);
+    }
+
+    .nav ul li a:hover::before,
+    .nav ul li a:focus-visible::before,
+    .footer-nav ul li a:hover::before,
+    .footer-nav ul li a:focus-visible::before {
         opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav ul li a:hover::after,
+    .nav ul li a:focus-visible::after,
+    .footer-nav ul li a:hover::after,
+    .footer-nav ul li a:focus-visible::after {
+        transform: scaleX(1);
+    }
+
+    /* Current page: the bar stays showing, so it isn't marked by colour alone */
+    .nav ul li a[aria-current]::after,
+    .footer-nav ul li a[aria-current]::after {
+        transform: scaleX(1);
+    }
+
+    /* Inset ring so it isn't clipped by .nav-link's overflow: hidden */
+    .nav-link a:focus-visible {
+        outline-offset: -4px;
+        box-shadow: none;
     }
 
     .nav-link a {
@@ -119,6 +170,8 @@
         display: block;
         border-radius: 5px;
         padding: 15px;
+        /* Without this the link is taller than its clipped <li>, which cuts off the hover pill and bar */
+        box-sizing: border-box;
     }
 
 /* ==========================================================================
@@ -135,13 +188,20 @@
         align-items: center;
         cursor: pointer;
         opacity: 0;
+        visibility: hidden;
         pointer-events: none;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease, visibility 0s linear 0.3s;
     }
 
     .lightbox.open {
         opacity: 1;
+        visibility: visible;
         pointer-events: all;
+        transition: opacity 0.3s ease, visibility 0s;
+    }
+
+    .lightbox:focus {
+        outline: none;
     }
 
     .lightbox-img {
@@ -163,14 +223,14 @@
    ========================================================================== */
 
     .line-break-footer {
-        border: 2px solid #008192;
+        border: 2px solid var(--accent);
         border-radius: 5px;
-        color: #008192;
+        color: var(--accent);
         margin: 20px 0;
     }
     footer {
-    background: linear-gradient(to bottom, #008192, #92f1ff);
-    border-top: 2px solid #008192;
+    background: var(--glass);
+    border-top: 2px solid var(--accent);
     }
 
     .footer-logo {
@@ -194,33 +254,17 @@
 
     .footer-nav ul li a {
         font-size: 30px;
-        position: relative;
-        z-index: 0;
-        color: rgb(255, 255, 255);
-        white-space: nowrap;
-    }
-
-    .footer-nav ul li a::before { /*On Hover*/
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, #494949, #008192);
-        opacity: 0;
-        transition: opacity 0.3s;
-        z-index: -1;
-        border-radius: 5px;
-    }
-
-    .footer-nav ul li:hover a::before { /*After Hover*/
-        opacity: 1;
     }
 
 
-    .footer-text h3 {
+    .footer-name {
+        font-size: 24px;
+        font-weight: 700;
         padding-top: 5px;
     }
 
-    .footer-text h4 {
+    .footer-role {
+        font-size: 18px;
         font-weight: 600;
     }
 
@@ -234,8 +278,10 @@
         padding-top: 30px;
     }
 
-    .footer-left  p, .footer-right p {
+    .footer-left p, .footer-right p {
         text-align: left;
+        font-family: Montserrat, sans-serif;
+        line-height: 1.5;
     }
 
     .footer-left {
@@ -256,17 +302,13 @@
         word-break: break-word;
     }
 
-    .footer-left p, .footer-right p {
-        font-family: 'Noto Sans';
-        font-size: 12px;
-    }
-
     .footer-bold {
         font-weight: bold;
         text-decoration: underline;
     }
 
     .footer-italic {
+        font-size: 24px;
         font-style: italic;
     }
 
@@ -295,12 +337,14 @@
     }
 
     .footer-social-icon a {
+        display: inline-block;
         color: white;
-        transition: color 0.3s;
+        transition: color 0.3s, transform 0.2s ease;
     }
 
     .footer-social-icon a:hover {
-    color: rgb(164, 164, 164); 
+    color: var(--accent);
+    transform: translateY(-2px) scale(1.1);
     }
 
 /* ==========================================================================
@@ -319,14 +363,14 @@
             top: 30px;
             right: 30px;
             z-index: 999;
-            background: #008192;
+            background: var(--panel);
             border-radius: 50%;
             width: 50px;
             height: 50px;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            border: none;
+            border: 2px solid var(--accent);
         }
 
         .hamburger span {
@@ -381,15 +425,19 @@
         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
+    /* visibility keeps the collapsed menu's links out of the keyboard tab order */
     .nav {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        visibility: hidden;
+        transition: max-height 0.3s ease, visibility 0s linear 0.3s;
         width: 100%;
     }
 
     .nav.open {
         max-height: 500px;
+        visibility: visible;
+        transition: max-height 0.3s ease, visibility 0s;
     }
 
     .nav ul {
@@ -409,13 +457,12 @@
     .footer-italic {
         font-style: italic;
         word-break: break-all;
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 600px) {
     .footer-text {
-    font-size: 50%;
     flex-direction: column;
     }
 
@@ -429,7 +476,7 @@
     }
 
     .footer-social-icon {
-    font-size: 20px;
+    font-size: 32px;
     padding: 5px;
     }
 

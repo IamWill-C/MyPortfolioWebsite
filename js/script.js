@@ -16,18 +16,25 @@ if (hamburger && nav) {
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
+// The element that opened the lightbox, so focus can go back to it on close
+let lightboxOpener = null;
+
 function openLightbox(img) {
     if (lightbox && lightboxImg) {
         // data-full lets a small thumbnail open a larger version of the same image
         lightboxImg.src = img.dataset.full || img.src;
         lightboxImg.alt = img.alt;
+        lightboxOpener = img;
         lightbox.classList.add('open');
+        lightbox.focus();
     }
 }
 
 function closeLightbox() {
-    if (lightbox) {
+    if (lightbox && lightbox.classList.contains('open')) {
         lightbox.classList.remove('open');
+        if (lightboxOpener) lightboxOpener.focus();
+        lightboxOpener = null;
     }
 }
 
@@ -35,6 +42,8 @@ if (lightbox) lightbox.addEventListener('click', closeLightbox);
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
+    // The lightbox has nothing else to focus, so keep Tab from moving focus to the page behind it
+    if (e.key === 'Tab' && lightbox && lightbox.classList.contains('open')) e.preventDefault();
 });
 
 document.querySelectorAll('img[data-lightbox]').forEach(img => {
@@ -115,8 +124,14 @@ if (form) {
 }
 
 // Accordion
-document.querySelectorAll('.accordion-btn').forEach(btn => {
+document.querySelectorAll('.accordion-btn').forEach((btn, i) => {
     btn.setAttribute('aria-expanded', 'false');
+    // Point each button at the panel it controls
+    const panel = btn.nextElementSibling;
+    if (panel) {
+        panel.id = panel.id || 'accordion-panel-' + (i + 1);
+        btn.setAttribute('aria-controls', panel.id);
+    }
     btn.addEventListener('click', () => {
         const content = btn.nextElementSibling;
         const iframe = content.querySelector('iframe');

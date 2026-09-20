@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
@@ -21,6 +22,7 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
         <header class="site-nav">
                 <div class="logo">
                     <a href="index.html"><img src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" width="400" height="400"></a>
@@ -29,7 +31,7 @@
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link"><a href="about.html" aria-current="page">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -46,6 +48,7 @@
                 <span></span>
             </button>
         </header>
+        <main id="main">
             <div class="about-section">
                 <div class="about-intro">
                     <br>
@@ -65,9 +68,9 @@
             <div class="skills-experience-grid">
                 <div>
                     <div class="about-skills">
-                        <h5>
+                        <h2>
                             Skills
-                        </h5>
+                        </h2>
                         <div class="skills-list">
                             <ul>
                                 <li><strong>3D Modeling:</strong> Blender, Maya, ZBrush</li>
@@ -86,9 +89,9 @@
                 <hr class="skills-experience-divider">
                 <div>
                     <div class="about-experience">
-                        <h5>
+                        <h2>
                             Experience
-                        </h5>
+                        </h2>
                         <div class="experience-list">
                             <ul>
                                 <li>Creative Lead @ Project Darkwater</li>
@@ -106,9 +109,9 @@
             </div>
             <div class="about-section">
                 <div class="about-education">
-                    <h5>
+                    <h2>
                         Education
-                    </h5>
+                    </h2>
                     <p>
                         Along with my Associate degree, I hold a Bachelor's degree in <strong>Digital Media for Game Design</strong> from the <strong>University of Central University</strong>, where I graduated with honors. 
                         During my time at university, I had the opportunity to work on a variety of game projects, both individually and as part of a team, 
@@ -121,9 +124,9 @@
         </div>
         <div class="about-section">
             <div class="about-contact">
-                <h5>
+                <h2>
                     Contact
-                </h5>
+                </h2>
                 <p>
                     If you would like to get in touch with me, please feel free to reach out via the <a class="about-nav-link" href="contact.html">contact page</a>. 
                     You can also connect with me on <a class="about-nav-link" href="https://www.linkedin.com/in/william-clevenger/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, 
@@ -136,9 +139,9 @@
         <hr class="about-line-break">
         <div class="about-section">
             <div class="about-hobbies">
-                <h5>
+                <h2>
                     Hobbies and Interests
-                </h5>
+                </h2>
                 <p>
                     In addition to my passion for 3D art and game development, I have a variety of hobbies and interests that keep me inspired and motivated. Some of my favorite activities include:
                 </p>
@@ -155,9 +158,9 @@
         </div>
         <div class="about-section">
             <div class="about-cats">
-                <h5>
+                <h2>
                     My Pets
-                </h5>
+                </h2>
                 <p>
                     I am a proud cat parent to five adorable feline companions, Tony, Vanellope, Giulia, Khonshu, and Odin. As well as a leopard gecko named Sisu!
                 </p>
@@ -186,21 +189,24 @@
                         <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/sisu_600.webp" data-full="Images/pets/sisu.webp" alt="Picture of one of Will's gecko, Sisu" data-lightbox>
                         <p class="cat-name">Sisu</p>
                     </div>
-                    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-                        <img class="lightbox-img" id="lightbox-img" alt="">
-                    </div>
                 </div>
-                 <h3 class="pet-footer">*Yes, they're all named after Disney and Marvel characters*</h3>
+                 <p class="pet-footer">*Yes, they're all named after Disney and Marvel characters*</p>
             </div>
         </div>
+        <!-- Lightbox: kept outside the frosted panels so it stays fixed to the viewport -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer. Press Escape to close." tabindex="-1">
+            <img class="lightbox-img" id="lightbox-img" alt="">
+        </div>
 
+
+        </main>
 
         <footer>
         <nav class="footer-nav">
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
                 <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
-                <li class="nav-link"><a href="about.html">About</a></li>
+                <li class="nav-link"><a href="about.html" aria-current="page">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -208,16 +214,16 @@
         <div class="footer-text">
             <div class="footer-left">
                 <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
-                <h3>Will Clevenger</h3>
+                <p class="footer-name">Will Clevenger</p>
                 <br>
-                <h4>3D Artist</h4>
+                <p class="footer-role">3D Artist</p>
                 <br>
                 <br>
             </div>
             <div class="footer-right">
                 <h2 class="footer-bold">Contact</h2>
                 <br>
-                <h3 class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></h3>
+                <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
                 <div class="footer-social">
                 <ul>
                     <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>

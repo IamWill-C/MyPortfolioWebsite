@@ -9,7 +9,7 @@
         .sub-nav {
             display: flex;
             justify-content: center;
-            background: rgba(0, 0, 0, 0.15);
+            background: var(--glass);
             padding: 10px 0;
             position: sticky;
             top: var(--header-h);
@@ -31,15 +31,31 @@
             font-size: 18px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            transition: color 0.3s;
+            position: relative;
+            display: inline-block;
         }
 
-        .sub-nav ul li a:hover {
-            color: #008192;
+        /* Same cyan bar as the main nav: grows out from the centre on hover/focus and stays on the current page */
+        .sub-nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            border-radius: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .sub-nav ul li a:hover::after,
+        .sub-nav ul li a:focus-visible::after,
+        .sub-nav ul li a.active::after {
+            transform: scaleX(1);
         }
 
         .sub-nav ul li a.active {
-            text-decoration: underline;
             font-weight: bold;
         }
 
@@ -62,6 +78,7 @@
             align-items: center;
             justify-content: center;
             color: white;
+            background: var(--glass);
             text-decoration: none;
             font-family: video-light, sans-serif;
             font-size: 40px;
@@ -69,7 +86,7 @@
             padding: 15px 20px;
             border: 2px solid white;
             border-radius: 10px;
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
             box-sizing: border-box;
             width: clamp(150px, 30%, 400px);
             text-align: center;
@@ -81,7 +98,8 @@
         }
 
         .page-nav-prev:hover, .page-nav-next:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 45, 52, 0.85);
+            border-color: var(--accent);
         }
 
 /* ==========================================================================
@@ -101,7 +119,7 @@
         margin: 0 auto;
         width: 50%;
         height: auto;
-        border: 5px solid #008192;
+        border: 5px solid var(--accent);
         border-radius: 30px;
         filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
         transition: transform 0.3s ease;
@@ -112,6 +130,9 @@
     }
 
     .showcase-img-text {
+        background: var(--glass);
+        border-radius: 16px;
+        margin: 10px 16px;
         text-align: center;
         font-family: video-light, sans-serif;
         font-size: 40px;
@@ -123,14 +144,15 @@
    ========================================================================== */
 
 .accordion {
-    border: 2px solid #008192;
+    background: var(--glass);
+    border: 2px solid var(--accent);
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin: 0 16px 15px;
 }
 
 .accordion-btn {
     width: 100%;
-    background: rgba(0, 129, 146, 0.2);
+    background: rgba(0, 0, 0, 0.15);
     border: none;
     color: white;
     font-family: video-light, sans-serif;
@@ -148,12 +170,12 @@
 }
 
 .accordion-btn:hover {
-    background: rgba(0, 129, 146, 0.4);
+    background: rgba(0, 0, 0, 0.28);
 }
 
 .accordion-btn.open {
-    background: rgba(0, 129, 146, 0.4);
-    border-bottom: 2px solid #008192;
+    background: rgba(0, 0, 0, 0.28);
+    border-bottom: 2px solid var(--accent);
     border-radius: 10px 10px 0 0;
 }
 
@@ -165,10 +187,12 @@
     transform: rotate(45deg);
 }
 
+/* visibility keeps collapsed content (links, lightbox images) out of the tab order and screen readers */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
+    visibility: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease, visibility 0s linear 0.4s;
     padding: 0 20px;
 }
 
@@ -176,6 +200,8 @@
     max-height: 5000px;
     padding: 20px;
     overflow: visible;
+    visibility: visible;
+    transition: max-height 0.4s ease, padding 0.3s ease, visibility 0s;
 }
 
 /* ==========================================================================
@@ -197,7 +223,18 @@
         filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5));
     }
 
+    /* Dark fade behind the title so it stays readable on any image */
+    .project-hero::after {
+        content: '';
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 50%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        pointer-events: none;
+    }
+
     .project-hero-title {
+        z-index: 1;
         position: absolute;
         bottom: 30px;
         left: 40px;
@@ -224,20 +261,20 @@
         flex: 1;
         position: sticky;
         align-self: flex-start;
-        background: rgba(0, 129, 146, 0.2);
-        border: 2px solid #008192;
+        background: rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent);
         border-radius: 10px;
         padding: 20px;
         box-sizing: border-box;
         top: calc(var(--header-h) + 80px);
     }
 
-    .project-sidebar h5 {
+    .project-sidebar h3 {
         font-family: video-light, sans-serif;
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 15px;
-        border-bottom: 2px solid #008192;
+        border-bottom: 2px solid var(--accent);
         padding-bottom: 10px;
     }
 
@@ -252,8 +289,8 @@
 
     .specs-list li {
         font-family: Montserrat, sans-serif;
-        font-size: 15px;
-        line-height: 1.4;
+        font-size: 16px;
+        line-height: 1.5;
         border-bottom: 1px solid rgba(255,255,255,0.2);
         padding-bottom: 15px;
     }
@@ -267,21 +304,21 @@
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     text-align: center;
-    background: rgba(239, 253, 255, 0.5);
+    background: #e8fbff;
+    color: #00303a;
     padding: 10px;
     border-radius: 0 0 10px 10px;
-    text-shadow: none;
 }
 
 .sketchfab-link {
-    color: #008192;
-    text-decoration: none;
+    color: #005a68;
+    text-decoration: underline;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .sketchfab-link:hover {
-    color: #92f1ff;
+    color: #003a44;
 }
 /* Section titles */
     .project-section-title {
@@ -290,7 +327,7 @@
         font-weight: bold;
         margin: 40px 0 20px 0;
         padding-bottom: 10px;
-        border-bottom: 2px solid #008192;
+        border-bottom: 2px solid var(--accent);
     }
 
 /* 3D Viewer */
@@ -298,7 +335,7 @@
         width: 100%;
         border-radius: 10px;
         overflow: hidden;
-        border: 2px solid #008192;
+        border: 2px solid var(--accent);
         filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
     }
 
@@ -322,7 +359,7 @@
         height: 250px;
         object-fit: cover;
         border-radius: 10px;
-        border: 2px solid #008192;
+        border: 2px solid var(--accent);
         filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
         transition: transform 0.3s ease;
     }
@@ -336,7 +373,7 @@
         margin-top: 8px;
         font-family: Montserrat, sans-serif;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
     }
 
 /* Detail Shots */
@@ -352,7 +389,7 @@
         height: 200px;
         object-fit: cover;
         border-radius: 10px;
-        border: 2px solid #008192;
+        border: 2px solid var(--accent);
         filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
         transition: transform 0.3s ease;
         cursor: pointer;
@@ -366,7 +403,7 @@
         text-align: center;
         margin-top: 8px;
         font-family: Montserrat, sans-serif;
-        font-size: 14px;
+        font-size: 16px;
     }
 
 /* Project description */
@@ -375,7 +412,9 @@
         font-size: 16px;
         line-height: 1.8;
         margin-bottom: 20px;
-        background-color: #008192;
+        max-width: 75ch;
+        background-color: var(--panel);
+        border: 2px solid var(--accent);
         padding: 20px;
         border-radius: 10px;
     }
@@ -404,7 +443,7 @@
     }
 
     .sub-nav ul li a {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
