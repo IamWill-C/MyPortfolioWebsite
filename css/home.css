@@ -27,6 +27,13 @@
         max-width: 40ch;
     }
 
+    .home-intro .home-subtagline {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        margin-top: 8px;
+        opacity: 0.85;
+    }
+
     .featured-title {
     text-align: center;
     padding: 10px 20px;
