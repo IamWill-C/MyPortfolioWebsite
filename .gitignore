@@ -1,2 +1,5 @@
 # Full-size source images (PNG/JPG) kept locally; the site uses the optimized .webp versions in Images/
 _original-images/
+
+# Files not currently used by the site, kept locally (mirrors Images/ paths so they can be moved back)
+_unused/

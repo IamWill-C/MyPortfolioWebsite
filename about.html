@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/about.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Will Clevenger - About</title>
         <meta name="description" content="About Will Clevenger, a 3D artist: skills, experience, education and the pets behind the work.">
@@ -11,17 +13,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="Images/WC_favicon.png">
+        <link rel="icon" type="image/png" href="Images/site/WC_favicon.png">
         <meta property="og:title" content="Will Clevenger - About">
         <meta property="og:description" content="About Will Clevenger, a 3D artist: skills, experience, education and the pets behind the work.">
-        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/WC_NewLogo.png">
+        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/WC_NewLogo.png">
         <meta property="og:url" content="https://iamwill-c.github.io/MyPortfolioWebsite/about.html">
         <meta property="og:type" content="website">
     </head>
     <body>
         <header class="site-nav">
                 <div class="logo">
-                    <a href="index.html"><img src="Images/WC_NewLogo.webp" alt="Will Clevenger - Home" width="400" height="400"></a>
+                    <a href="index.html"><img src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" width="400" height="400"></a>
                 </div>
             <nav class="nav" id="nav">
                 <ul class="page-links">
@@ -56,7 +58,7 @@
                         texturing, lighting, and VFX, I strive to bring my artistic vision to life through my work. I am constantly seeking new challenges and 
                         opportunities to grow as an artist and contribute to the gaming industry.
                     </p>
-                    <img class="headshot-pic" src="Images/WillClevenger.webp" alt="Headshot of Will Clevenger">
+                    <img class="headshot-pic" src="Images/about/WillClevenger.webp" alt="Headshot of Will Clevenger">
                 </div>
             </div>
         <div class="about-block">
@@ -161,30 +163,30 @@
                 </p>
                 <div class="cat-gallery">
                     <div class="cat-item">
-                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/tony_600.webp" data-full="Images/tony.webp" alt="Picture of one of Will's cats, Tony" onclick="openLightbox(this)">
+                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/tony_600.webp" data-full="Images/pets/tony.webp" alt="Picture of one of Will's cats, Tony" data-lightbox>
                         <p class="cat-name">Tony</p>
                     </div>
                     <div class="cat-item">
-                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/vanellope_600.webp" data-full="Images/vanellope.webp" alt="Picture of one of Will's cats, Vanellope" onclick="openLightbox(this)">
+                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/vanellope_600.webp" data-full="Images/pets/vanellope.webp" alt="Picture of one of Will's cats, Vanellope" data-lightbox>
                         <p class="cat-name">Vanellope</p>
                     </div>
                     <div class="cat-item">
-                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/giulia_600.webp" data-full="Images/giulia.webp" alt="Picture of one of Will's cats, Giulia" onclick="openLightbox(this)">
+                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/giulia_600.webp" data-full="Images/pets/giulia.webp" alt="Picture of one of Will's cats, Giulia" data-lightbox>
                         <p class="cat-name">Giulia</p>
                     </div>
                     <div class="cat-item">
-                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/khonshu_600.webp" data-full="Images/khonshu.webp" alt="Picture of one of Will's cats, Khonshu" onclick="openLightbox(this)">
+                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/khonshu_600.webp" data-full="Images/pets/khonshu.webp" alt="Picture of one of Will's cats, Khonshu" data-lightbox>
                         <p class="cat-name">Khonshu</p>
                     </div>
                     <div class="cat-item">
-                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/odin_600.webp" data-full="Images/odin.webp" alt="Picture of one of Will's cats, Odin" onclick="openLightbox(this)">
+                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/odin_600.webp" data-full="Images/pets/odin.webp" alt="Picture of one of Will's cats, Odin" data-lightbox>
                         <p class="cat-name">Odin</p>
                     </div>
                     <div class="cat-item">
-                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/sisu_600.webp" data-full="Images/sisu.webp" alt="Picture of one of Will's gecko, Sisu" onclick="openLightbox(this)">
+                        <img loading="lazy" decoding="async" class="cat-pic" src="Images/pets/sisu_600.webp" data-full="Images/pets/sisu.webp" alt="Picture of one of Will's gecko, Sisu" data-lightbox>
                         <p class="cat-name">Sisu</p>
                     </div>
-                    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" onclick="closeLightbox()">
+                    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
                         <img class="lightbox-img" id="lightbox-img" alt="">
                     </div>
                 </div>
@@ -205,7 +207,7 @@
         <hr class="line-break-footer">
         <div class="footer-text">
             <div class="footer-left">
-                <img class="footer-logo" src="Images/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
+                <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
                 <h3>Will Clevenger</h3>
                 <br>
                 <h4>3D Artist</h4>
@@ -226,6 +228,6 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>

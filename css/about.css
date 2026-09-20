@@ -1,0 +1,170 @@
+/* ==========================================================================
+   About page
+   ========================================================================== */
+
+    .about-section {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .about-intro {
+        text-align: center;
+    }
+
+    .about-intro h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .about-intro p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .headshot-pic {
+        width: 300px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #008192;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .about-section h5, .about-skills h5, .about-experience h5 {
+        font-family: video-light, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .about-block {
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .about-skills, .about-experience {
+        font-family: Montserrat, sans-serif;
+        flex: 1;
+    }
+
+    .about-skills {
+        padding-right: 10px;
+    }
+
+    .skills-experience-divider {
+        height: 300px;
+        width: 1px;
+        border: 1px solid #008192;
+        border-radius: 5px;
+        color: #008192;
+        background: #008192;
+    }
+
+    .about-experience {
+        padding-left: 10px;
+    }
+
+    .skills-list ul li, .experience-list ul li {
+        line-height: 1.6;
+    }
+
+    .experience-date {
+        font-style: italic;
+        padding-left: 10px;
+    }
+
+    .skills-experience-grid {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .about-nav-link {
+    color: #008192;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: none;
+    }
+
+    .about-nav-link:hover {
+    text-decoration: underline;
+    color: #92f1ff;
+    transition: color 0.3s;
+    }
+
+    .about-line-break {
+        border: 2px solid #008192;
+        border-radius: 5px;
+        color: #008192;
+        margin: 20px 0;
+    }
+
+    .hobbies-list {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .hobbies-list ul li {
+        font-size: 14px;
+        font-family: Montserrat, sans-serif;
+        line-height: 1.6;
+        list-style: disc;
+        margin-left: 20px;
+    }
+
+    .about-cats p {
+        padding-bottom: 20px;
+    }
+
+    .cat-gallery {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cat-pic {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 30px;
+        border: 5px solid #008192;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .cat-pic:hover {
+        transform: scale(1.05);
+    }
+
+    .cat-item p {
+        text-align: center;
+        margin-top: 10px;
+        font-family: video-light, sans-serif;
+        font-size: 30px;
+        border: 3px solid #92f1ff;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.15);
+        padding: 5px 0px;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .pet-footer {
+        text-align: center;
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-style: italic;
+        padding-top: 20px;
+    }

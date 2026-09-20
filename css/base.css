@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Base: variables, typography and utilities (loaded on every page)
+   ========================================================================== */
+
+/* {
+    outline: 1px solid red;
+}*/
+
+:root {
+    --header-h: 120px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to bottom, #92f1ff, #008192);
+    background-attachment: scroll;
+    min-height: 100vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* width/height attributes reserve space before an image loads; height:auto keeps the CSS-set width from distorting them */
+img {
+    height: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+p {
+    font-family: Montserrat, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: video-light, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+}
+
+h3 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+
+h4 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.line-break {
+    width: 90%;
+    border: 2px solid #008192;
+    border-radius: 5px;
+    color: #008192;
+    margin: 20px 0;
+}
+
+/* Header height changes on small screens (used by the sticky sub-nav offsets) */
+
+@media (max-width: 1080px) {
+    :root {
+        --header-h: 170px;
+    }
+}

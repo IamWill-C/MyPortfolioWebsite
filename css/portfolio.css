@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Portfolio page (load after home.css)
+   ========================================================================== */
+
+    .featured-item-title {
+        font-size: 40px !important;
+        padding: 5px 0px;
+        text-decoration: none !important;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .portfolio-grid .featured-item img {
+    width: 95%;
+    }
