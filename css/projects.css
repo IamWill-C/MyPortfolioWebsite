@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Projects page (load after home.css, which supplies .home-content, .featured-title and .building-status)
+   ========================================================================== */
+
+    .projects-header {
+        padding: 0 20px 10px;
+        text-align: center;
+    }
+
+    .projects-lead {
+        max-width: 60ch;
+        margin: 0 auto;
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Image on one side, text on the other; the sides swap on every second card */
+    .project-card {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+        gap: 30px;
+        align-items: center;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent);
+        border-radius: 10px;
+        /* Room for the sticky header when a card is opened from a link (projects.html#well-versed) */
+        scroll-margin-top: calc(var(--header-h) + 50px);
+    }
+
+    .project-card:nth-child(even) .project-card-media {
+        order: 2;
+    }
+
+    .project-card-media img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border: 5px solid var(--accent);
+        border-radius: 20px;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .project-card-body h2 {
+        margin: 4px 0;
+        font-size: 36px;
+    }
+
+    .project-tagline {
+        margin-bottom: 12px;
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .project-summary {
+        max-width: 75ch;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .project-facts {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 6px 16px;
+        margin: 16px 0 0;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .project-facts dt {
+        font-weight: 700;
+    }
+
+    .project-facts dd {
+        margin: 0;
+    }
+
+    .project-card .project-links {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .project-list {
+            padding: 10px 0;
+        }
+
+        .project-card {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 16px;
+        }
+
+        .project-card:nth-child(even) .project-card-media {
+            order: 0;
+        }
+
+        .project-card-body h2 {
+            font-size: 30px;
+        }
+    }
+
+/* ==========================================================================
+   Section headings, game jam cards and the award tag
+   ========================================================================== */
+
+    .projects-section-title {
+        max-width: 1200px;
+        margin: 30px auto 0;
+        padding: 0 20px 10px;
+        font-size: 36px;
+    }
+
+    .projects-section-title::after {
+        content: '';
+        display: block;
+        margin-top: 10px;
+        height: 2px;
+        background: var(--accent);
+    }
+
+    /* Smaller cards with no image for the game jam entries */
+    .jam-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .jam-grid .project-tagline {
+        margin-bottom: 10px;
+    }
+
+    .building-status-award {
+        color: #003c46;
+        background: var(--accent);
+        border-color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+        .jam-grid {
+            grid-template-columns: 1fr;
+            padding: 10px 0;
+        }
+
+        .projects-section-title {
+            padding: 0 4px 10px;
+            font-size: 30px;
+        }
+    }

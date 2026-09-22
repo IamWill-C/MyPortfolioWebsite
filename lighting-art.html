@@ -13,11 +13,15 @@
         <link rel="stylesheet" href="https://use.typekit.net/hxb7miy.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kalam:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="Images/site/WC_favicon.png">
         <meta property="og:title" content="Will Clevenger - Lighting Art">
         <meta property="og:description" content="Lighting art by Will Clevenger (coming soon).">
-        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/WC_NewLogo.png">
+        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Render of a game-ready pirate cutlass by Will Clevenger, a 3D artist">
+        <meta name="twitter:card" content="summary_large_image">
         <meta property="og:url" content="https://iamwill-c.github.io/MyPortfolioWebsite/lighting-art.html">
         <meta property="og:type" content="website">
     </head>
@@ -31,6 +35,7 @@
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                    <li class="nav-link"><a href="projects.html">Projects</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -40,6 +45,7 @@
                     <li class="social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li class="social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
                     <li class="social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
                 </ul>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
@@ -50,28 +56,26 @@
         </header>
         <nav class="sub-nav">
             <ul>
-                <li><a href="environment-art.html">Environment</a></li>
-                <li><a href="prop-modeling.html">Props</a></li>
-                <li><a href="vfx-art.html">VFX</a></li>
-                <li><a href="lighting-art.html" class="active" aria-current="page">Lighting</a></li>
+                <li><a href="environment-art.html"><i class="fa-solid fa-tree" aria-hidden="true"></i>Environment</a></li>
+                <li><a href="prop-modeling.html"><i class="fa-solid fa-cubes" aria-hidden="true"></i>Props</a></li>
+                <li><a href="vfx-art.html"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>VFX</a></li>
+                <li><a href="lighting-art.html" class="active" aria-current="page"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Lighting</a></li>
+                <li><a href="web-projects.html"><i class="fa-solid fa-globe" aria-hidden="true"></i>Web</a></li>
             </ul>
         </nav>
         <main id="main">
         <h1 class="sr-only">Lighting Art</h1>
-        <div class="showcase">
-            <img src="Images/site/ComingSoon.webp" alt="Lighting Art Showcase">
-            <h2 class="showcase-img-text">Here Is Lighting Art!</h2>
-        </div>
-        <div class="accordion">
+        <div class="showcase"></div>
+        <div class="accordion" id="shot-guesser">
             <button class="accordion-btn">
-                Project #1
+                Shot Guesser
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_TavernWindow_Hero.webp" alt="Warm light from a window and wall lanterns falling across a wooden table in the Shot Guesser tavern">
+                    <h2 class="project-hero-title">Shot Guesser</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -82,86 +86,66 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            Description of the scene, the mood you were going for, and your artistic intent.
+                            Lighting for the Shot Guesser tavern, built around warm wall lanterns, a lit window, and the glow along the bar.
                         </p>
 
-                        <!-- 2. Beauty Shot Comparison -->
-                        <h3 class="project-section-title">Before & After</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Unlit Scene" data-lightbox>
-                                <p>Unlit / Base Scene</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Lit Scene" data-lightbox>
-                                <p>Final Lit Scene</p>
-                            </div>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I placed the wall lanterns and window light first to establish the tavern's warm baseline, then added a subtler glow along the bar to pull focus toward the counter. For the lanterns, I wrote a script that randomizes each light's intensity over time so they flicker like real flame instead of holding a static glow. I kept the intensities balanced so the shelves and corners stayed readable without competing with the bar as the focal point.
+                        </p>
+
+                        <h3 class="project-section-title">Level Flythrough</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/SG_Flythrough.webp" aria-label="Camera flythrough of the Shot Guesser tavern showing its lighting">
+                                <source src="Videos/PandorasPartyBox/SG_Flythrough.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Lighting Breakdown -->
-                        <h3 class="project-section-title">Lighting Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Light Setup" data-lightbox>
-                                <p>Light Placement / Rig</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Lights Only" data-lightbox>
-                                <p>Lights Only Pass</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Shadow Pass" data-lightbox>
-                                <p>Shadow Pass</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Global Illumination" data-lightbox>
-                                <p>Global Illumination</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Mood Variations -->
-                        <h3 class="project-section-title">Mood Variations</h3>
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Lighting Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Day" data-lightbox>
-                                <p>Day</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_TavernWindow_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/SG_TavernWindow.webp" alt="Warm window light falling across a wooden table" data-lightbox>
+                                <p>Window Light</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Dusk" data-lightbox>
-                                <p>Dusk</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_BarCounter_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/SG_BarCounter.webp" alt="Warm light across the Shot Guesser bar, barrels and shelves" data-lightbox>
+                                <p>Bar Lighting</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Night" data-lightbox>
-                                <p>Night</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_BarShelves_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/SG_BarShelves.webp" alt="Light picking out blue bottles and barrels on the shelves behind the bar" data-lightbox>
+                                <p>Shelf Lighting</p>
                             </div>
                         </div>
+
                     </div>
-                    <!-- 5. Sidebar Specs -->
+
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> Unreal Engine 5, Maya</li>
-                            <li><strong>Lighting Type:</strong> Dynamic / Baked / Mixed</li>
-                            <li><strong>Light Count:</strong> X lights</li>
-                            <li><strong>Render Method:</strong> Lumen / Path Tracing / etc.</li>
-                            <li><strong>Scene:</strong> Interior / Exterior / Both</li>
-                            <li><strong>Timeframe:</strong> X days</li>
+                            <li><strong>Role:</strong> Lighting Designer</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity</li>
+                            <li><strong>Year:</strong> 2026</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="leopard-tug">
             <button class="accordion-btn">
-                Project #2
+                Leopard Tug
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Vista_Hero.webp" alt="A low golden sun breaking through clouds over a hillside and mountain seen past a tiled rooftop">
+                    <h2 class="project-hero-title">Leopard Tug</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -172,86 +156,68 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            Description of the scene, the mood you were going for, and your artistic intent.
+                            Lighting for the Leopard Tug hall, with a low golden sun over the hillside, warm light along the arches, and wall lanterns.
                         </p>
 
-                        <!-- 2. Beauty Shot Comparison -->
-                        <h3 class="project-section-title">Before & After</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Unlit Scene" data-lightbox>
-                                <p>Unlit / Base Scene</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Lit Scene" data-lightbox>
-                                <p>Final Lit Scene</p>
-                            </div>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I set up the low golden sun as the key light for the hillside vista, then layered in warm fill along the arcade and lanterns near the gates so the transition from outdoor to indoor light felt natural as the camera moved through the hall. The gate lanterns use the same flicker script as the other open flames in the game, so they read as live fire rather than a fixed light.
+                        </p>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Poster.webp" aria-label="Gameplay preview of the Leopard Tug minigame">
+                                <source src="Videos/PandorasPartyBox/LeopardTug.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Lighting Breakdown -->
-                        <h3 class="project-section-title">Lighting Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Light Setup" data-lightbox>
-                                <p>Light Placement / Rig</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Lights Only" data-lightbox>
-                                <p>Lights Only Pass</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Shadow Pass" data-lightbox>
-                                <p>Shadow Pass</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Global Illumination" data-lightbox>
-                                <p>Global Illumination</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Mood Variations -->
-                        <h3 class="project-section-title">Mood Variations</h3>
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Lighting Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Day" data-lightbox>
-                                <p>Day</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Vista_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/LT_Vista.webp" alt="A low golden sun breaking through clouds above a hillside" data-lightbox>
+                                <p>Golden Sky</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Dusk" data-lightbox>
-                                <p>Dusk</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Arcade_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/LT_Arcade.webp" alt="Warm light along a stone arcade and cobbled path" data-lightbox>
+                                <p>Arcade Light</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Night" data-lightbox>
-                                <p>Night</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Gate_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/LT_Gate.webp" alt="A wall lantern and iron gates lit warmly beside a dirt path" data-lightbox>
+                                <p>Gate and Lantern</p>
                             </div>
                         </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Leopard character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
                     </div>
-                    <!-- 5. Sidebar Specs -->
+
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> Unreal Engine 5, Maya</li>
-                            <li><strong>Lighting Type:</strong> Dynamic / Baked / Mixed</li>
-                            <li><strong>Light Count:</strong> X lights</li>
-                            <li><strong>Render Method:</strong> Lumen / Path Tracing / etc.</li>
-                            <li><strong>Scene:</strong> Interior / Exterior / Both</li>
-                            <li><strong>Timeframe:</strong> X days</li>
+                            <li><strong>Role:</strong> Lighting Designer</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity</li>
+                            <li><strong>Year:</strong> 2026</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="grape-stomp">
             <button class="accordion-btn">
-                Project #3
+                Grape Stomp
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/GS_Vineyard_Hero.webp" alt="Soft daylight over the Grape Stomp vineyard with hills and mountains behind the wooden stage">
+                    <h2 class="project-hero-title">Grape Stomp</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -262,70 +228,131 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            Description of the scene, the mood you were going for, and your artistic intent.
+                            Lighting for the Grape Stomp vineyard, with soft daylight across the stage, the vines, and the hills behind.
                         </p>
 
-                        <!-- 2. Beauty Shot Comparison -->
-                        <h3 class="project-section-title">Before & After</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Unlit Scene" data-lightbox>
-                                <p>Unlit / Base Scene</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Lit Scene" data-lightbox>
-                                <p>Final Lit Scene</p>
-                            </div>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I used a soft, slightly overcast daylight setup for the vineyard so the stage, vines, and hills all read clearly without harsh shadows competing with the gameplay in the foreground.
+                        </p>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Poster.webp" aria-label="Gameplay preview of the Grape Stomp minigame">
+                                <source src="Videos/PandorasPartyBox/GrapeStomp.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Lighting Breakdown -->
-                        <h3 class="project-section-title">Lighting Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Light Setup" data-lightbox>
-                                <p>Light Placement / Rig</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Lights Only" data-lightbox>
-                                <p>Lights Only Pass</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Shadow Pass" data-lightbox>
-                                <p>Shadow Pass</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Global Illumination" data-lightbox>
-                                <p>Global Illumination</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Mood Variations -->
-                        <h3 class="project-section-title">Mood Variations</h3>
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Lighting Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Day" data-lightbox>
-                                <p>Day</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/GS_Vineyard_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/GS_Vineyard.webp" alt="Soft daylight over the vineyard stage" data-lightbox>
+                                <p>Vineyard Daylight</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Dusk" data-lightbox>
-                                <p>Dusk</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still2.webp" alt="The Grape Stomp scene during play" data-lightbox>
+                                <p>In Play</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Night" data-lightbox>
-                                <p>Night</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still3.webp" alt="The Grape Stomp scene late in a round" data-lightbox>
+                                <p>Late Round</p>
                             </div>
                         </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Level layout and most of the environmental props by <a href="https://www.artstation.com/vonni" target="_blank" rel="noopener noreferrer">Veronica Mauro</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
                     </div>
-                    <!-- 5. Sidebar Specs -->
+
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> Unreal Engine 5, Maya</li>
-                            <li><strong>Lighting Type:</strong> Dynamic / Baked / Mixed</li>
-                            <li><strong>Light Count:</strong> X lights</li>
-                            <li><strong>Render Method:</strong> Lumen / Path Tracing / etc.</li>
-                            <li><strong>Scene:</strong> Interior / Exterior / Both</li>
-                            <li><strong>Timeframe:</strong> X days</li>
+                            <li><strong>Role:</strong> Lighting Designer</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="hera-intro-cutscene">
+            <button class="accordion-btn">
+                Hera Intro Cutscene
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Hero.webp" alt="Hera standing in a backlit doorway as fog rolls across the floor of a tavern">
+                    <h2 class="project-hero-title">Hera Intro Cutscene</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            Lighting and fog for the Hera introduction cutscene. The scene cuts from a warm tavern interior to a backlit doorway, where a fog bank rolls across the floor as Hera appears.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I lit the tavern interior warmly to match the rest of the space, using the same flicker script on its lantern as the game's other open flames so it reads as live firelight rather than a static glow, then set up a strong backlight in the doorway so Hera's silhouette would read clearly through the fog. Getting the fog density and the backlight intensity to balance took the most iteration, since too much of either flattened the reveal.
+                        </p>
+
+                        <h3 class="project-section-title">Intro Fog</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/HC_IntroFog.webp" aria-label="Loop of white fog rolling across a tavern floor in front of a backlit doorway">
+                                <source src="Videos/PandorasPartyBox/HC_IntroFog.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Cutscene Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Poster.webp" aria-label="Preview of the Hera introduction cutscene">
+                                <source src="Videos/PandorasPartyBox/HeraCutscene.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Lighting Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Still1_800.webp" data-full="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Still1.webp" alt="A dark goblet on a wooden table lit by warm light" data-lightbox>
+                                <p>Goblet on the Table</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Still2.webp" alt="The tavern interior with colorful bird characters and a lit lantern" data-lightbox>
+                                <p>Tavern Interior</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Still3.webp" alt="Hera in a bright doorway behind a bank of white fog" data-lightbox>
+                                <p>Backlit Doorway and Fog</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Hera character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>, except the bird dance animations, by <a href="https://www.artstation.com/vonni" target="_blank" rel="noopener noreferrer">Veronica Mauro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> Lighting Designer, VFX Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity</li>
+                            <li><strong>Year:</strong> 2026</li>
                         </ul>
                     </aside>
 
@@ -337,8 +364,8 @@
             <img class="lightbox-img" id="lightbox-img" alt="">
         </div>
         <div class="page-nav">
-            <a href="vfx-art.html" class="page-nav-next">← VFX</a>
-            <a href="environment-art.html" class="page-nav-prev">Environment →</a>
+            <a href="vfx-art.html" class="page-nav-prev">← VFX</a>
+            <a href="web-projects.html" class="page-nav-next">Web →</a>
         </div>
         </main>
 
@@ -347,33 +374,35 @@
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
                 <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                <li class="nav-link"><a href="projects.html">Projects</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <hr class="line-break-footer">
-        <div class="footer-text">
-            <div class="footer-left">
-                <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="index.html"><img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" loading="lazy" width="400" height="400"></a>
                 <p class="footer-name">Will Clevenger</p>
-                <br>
-                <p class="footer-role">3D Artist</p>
-                <br>
-                <br>
+                <p class="footer-role">3D Artist &amp; Web Developer</p>
+                <p class="footer-blurb">Environment art, props, VFX and lighting for games, plus the occasional website.</p>
             </div>
-            <div class="footer-right">
-                <h2 class="footer-bold">Contact</h2>
-                <br>
+            <div class="footer-contact">
+                <h2 class="footer-heading">Get in Touch</h2>
                 <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
+                <a class="footer-cta" href="contact.html">Let's work together <span aria-hidden="true">&rarr;</span></a>
                 <div class="footer-social">
-                <ul>
-                    <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+                    <ul>
+                        <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="footer-social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-        </div>    
+        </div>
+        <hr class="line-break-footer footer-bottom-line">
+        <p class="footer-copyright">&copy; 2026 Will Clevenger. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
     </body>

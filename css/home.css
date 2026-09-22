@@ -18,6 +18,8 @@
         padding-bottom: 10px;
         font-size: 50px;
         font-weight: bold;
+        /* A flat drop shadow for depth, plus a soft accent glow behind the name for a bit of hero-treatment pop */
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 24px rgba(146, 241, 255, 0.35);
     }
 
     .home-intro .home-tagline {
@@ -25,6 +27,7 @@
         font-size: 30px;
         line-height: 1.3;
         max-width: 40ch;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .home-intro .home-subtagline {
@@ -32,6 +35,7 @@
         font-size: 20px;
         margin-top: 8px;
         opacity: 0.85;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .featured-title {
@@ -74,4 +78,320 @@
         padding-top: 5px;
         text-align: center;
         font-weight: normal;
+    }
+
+/* ==========================================================================
+   Home hero, availability badge and current project
+   ========================================================================== */
+
+    /* Intro text beside a featured render */
+    .home-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 30px;
+        align-items: center;
+    }
+
+    .hero-visual {
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    /* A fixed aspect ratio keeps the frame's size steady across slides of different source
+       dimensions, and gives the two stacked images a shared box to dissolve between */
+    .hero-carousel-frame {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        border: 5px solid var(--accent);
+        border-radius: 30px;
+        overflow: hidden;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    /* Two stacked images crossfade into each other; see showHeroSlide in script.js */
+    .hero-carousel-img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.9s ease;
+    }
+
+    .hero-carousel-img.is-active {
+        opacity: 1;
+    }
+
+    .hero-carousel-arrow,
+    .hero-carousel-pause {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: rgba(0, 30, 38, 0.55);
+        border: 2px solid var(--accent);
+        border-radius: 50%;
+        cursor: pointer;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transition: background 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .hero-carousel-arrow {
+        top: 50%;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        transform: translateY(-50%);
+    }
+
+    .hero-carousel-prev {
+        left: 14px;
+    }
+
+    .hero-carousel-next {
+        right: 14px;
+    }
+
+    .hero-carousel-arrow:hover,
+    .hero-carousel-arrow:focus-visible {
+        background: rgba(0, 0, 0, 0.8);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .hero-carousel-arrow:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+
+    .hero-carousel-pause {
+        top: 14px;
+        right: 14px;
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .hero-carousel-pause:hover,
+    .hero-carousel-pause:focus-visible {
+        background: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+    }
+
+    .hero-carousel-pause:active {
+        transform: scale(0.95);
+    }
+
+    /* The Font Awesome kit script swaps each <i> for an inline <svg> after load, carrying its
+       classes over, so the icon is toggled with CSS on those classes rather than by touching the
+       element from script.js (which could run before or after that swap happens). */
+    .hero-carousel-play-icon {
+        display: none;
+    }
+
+    .hero-carousel-pause.is-paused .hero-carousel-pause-icon {
+        display: none;
+    }
+
+    .hero-carousel-pause.is-paused .hero-carousel-play-icon {
+        display: inline;
+    }
+
+    .hero-carousel figcaption {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        font-family: Montserrat, sans-serif;
+        font-size: 17px;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Toggled by script.js in step with the image crossfade, so the caption dissolves
+       between pieces instead of snapping straight to the new title */
+    .hero-carousel figcaption.is-fading {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    .hero-carousel-text {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #heroCarouselTitle {
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-carousel-category {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        white-space: nowrap;
+    }
+
+    .hero-carousel-count {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        white-space: nowrap;
+    }
+
+    /* Overrides .project-link-btn's inline-flex so margin: auto can centre it under the frame */
+    .hero-carousel-btn {
+        display: flex;
+        width: fit-content;
+        margin: 16px auto 0;
+    }
+
+    .availability {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        padding: 10px 22px;
+        font-family: Montserrat, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        background: rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent);
+        border-radius: 999px;
+        color: inherit;
+        text-decoration: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .availability:hover,
+    .availability:focus-visible {
+        background: rgba(0, 0, 0, 0.35);
+        transform: translateY(-3px) scale(1.06) rotate(-3deg);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 16px rgba(146, 241, 255, 0.5);
+    }
+
+    .availability:active {
+        transform: translateY(-1px) scale(0.98) rotate(-1deg);
+    }
+
+    .availability-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #4ade80;
+        flex-shrink: 0;
+        animation: availability-pulse 2s ease-out infinite;
+    }
+
+    @keyframes availability-pulse {
+        0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+        70%, 100% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+    }
+
+    /* Tiles lift a little on hover or keyboard focus, on top of the image zoom */
+    .featured-item {
+        transition: transform 0.3s ease;
+    }
+
+    .featured-item:hover,
+    .featured-item:focus-within {
+        transform: translateY(-6px);
+    }
+
+    .currently-building {
+        padding: 0 20px 20px;
+    }
+
+    .building-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 10px auto 0;
+    }
+
+    .building-more {
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    /* Two columns on mid-size screens: the odd third card spans the full row */
+    @media (max-width: 1099px) {
+        .building-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .building-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .building-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent);
+        border-radius: 10px;
+    }
+
+    /* Keep the buttons on the same line across cards, whatever the text length */
+    .building-card .project-links {
+        margin-top: auto;
+        padding-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .building-status {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 4px 12px;
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+    }
+
+    .building-card h3 {
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+
+    .building-card p {
+        max-width: 75ch;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+        .home-hero {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .building-grid {
+            grid-template-columns: 1fr;
+        }
     }

@@ -51,6 +51,9 @@
         margin: 20px auto;
         width: calc(100% - 32px);
         border-radius: 16px;
+        /* Non-zero padding stops the nested Education panel's bottom margin from collapsing
+           through and leaving no gap before this box's own rounded corner */
+        padding-bottom: 20px;
     }
 
     .about-skills, .about-experience {
@@ -82,6 +85,11 @@
     .experience-date {
         font-style: italic;
         padding-left: 10px;
+    }
+
+    /* Education's own panel needs more room at the bottom so its text isn't cramped against the rounded corner */
+    .about-education-wrap {
+        padding-bottom: 40px;
     }
 
     .skills-experience-grid {

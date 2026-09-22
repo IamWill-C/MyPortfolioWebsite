@@ -13,11 +13,15 @@
         <link rel="stylesheet" href="https://use.typekit.net/hxb7miy.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kalam:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="Images/site/WC_favicon.png">
         <meta property="og:title" content="Will Clevenger - VFX Art">
         <meta property="og:description" content="Real-time VFX by Will Clevenger (coming soon).">
-        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/WC_NewLogo.png">
+        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Render of a game-ready pirate cutlass by Will Clevenger, a 3D artist">
+        <meta name="twitter:card" content="summary_large_image">
         <meta property="og:url" content="https://iamwill-c.github.io/MyPortfolioWebsite/vfx-art.html">
         <meta property="og:type" content="website">
     </head>
@@ -31,6 +35,7 @@
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                    <li class="nav-link"><a href="projects.html">Projects</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -40,6 +45,7 @@
                     <li class="social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li class="social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
                     <li class="social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
                 </ul>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
@@ -50,28 +56,26 @@
         </header>
         <nav class="sub-nav">
             <ul>
-                <li><a href="environment-art.html">Environment</a></li>
-                <li><a href="prop-modeling.html">Props</a></li>
-                <li><a href="vfx-art.html" class="active" aria-current="page">VFX</a></li>
-                <li><a href="lighting-art.html">Lighting</a></li>
+                <li><a href="environment-art.html"><i class="fa-solid fa-tree" aria-hidden="true"></i>Environment</a></li>
+                <li><a href="prop-modeling.html"><i class="fa-solid fa-cubes" aria-hidden="true"></i>Props</a></li>
+                <li><a href="vfx-art.html" class="active" aria-current="page"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>VFX</a></li>
+                <li><a href="lighting-art.html"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Lighting</a></li>
+                <li><a href="web-projects.html"><i class="fa-solid fa-globe" aria-hidden="true"></i>Web</a></li>
             </ul>
         </nav>
         <main id="main">
         <h1 class="sr-only">VFX Art</h1>
-        <div class="showcase">
-            <img src="Images/site/ComingSoon.webp" alt="VFX Art Showcase">
-            <h2 class="showcase-img-text">Here Is VFX Art!</h2>
-        </div>
-        <div class="accordion">
+        <div class="showcase"></div>
+        <div class="accordion" id="light-reforged-vfx">
             <button class="accordion-btn">
-                Project #1
+                Light Reforged VFX
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/LightReforgedVFX/LR_Hero.webp" alt="Three cannons on a tiled platform, one wreathed in flames, one with green energy sparks and one with a blue frosted glow">
+                    <h2 class="project-hero-title">Light Reforged VFX</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -82,81 +86,84 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            Description of the effect, what it's for, and the artistic intent.
+                            Effects I made in Niagara for Light Reforged, captured in a test level. Cannon Switch gives three cannon
+                            variants their own look: flames, green energy, and a frosted blue glow. The portal is a blue disc with a
+                            swirling core and a ring of particles, and the wisp is a glowing light that trails sparks and drifting
+                            motes. I also made the lightning strike and rain of arrows area effects, Loki's protection orb, orb
+                            explosions, steam bursts, and the effects for Ivaldi, Sif, and Idunn's apple.
                         </p>
 
-                        <!-- 2. Video/Preview -->
-                        <h3 class="project-section-title">Preview</h3>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            Each effect started as a quick reference pass, flame, energy, frost, before I built it out in Niagara with layered emitters for the base shape, sparks, and glow. I kept the cannon variants on a shared system with swappable modules so all three could reuse the same core setup, then tuned color, motion, and timing in a test level until each read clearly at a distance.
+                        </p>
+
+                        <h3 class="project-section-title">Cannon Switch</h3>
                         <div class="viewer-embed">
-                            <!-- YouTube or Vimeo embed instead of Sketchfab -->
-                            <iframe title="Effect preview video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/LightReforgedVFX/CannonSwitch_Poster.webp" aria-label="Three cannons with different effects: a red cannon wreathed in flames, a green cannon with energy sparks and a blue cannon with a frosted glow">
+                                <source src="Videos/LightReforged/CannonSwitch.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Technical Breakdown -->
-                        <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Node Graph" data-lightbox>
-                                <p>Node Graph / Setup</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Simulation" data-lightbox>
-                                <p>Simulation Settings</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Geometry / Emitters</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Sheet" data-lightbox>
-                                <p>Texture Sheet / Flipbook</p>
-                            </div>
+                        <h3 class="project-section-title">Portal</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/LightReforgedVFX/Portal_Poster.webp" aria-label="A blue circular portal with a swirling center and particles around its rim">
+                                <source src="Videos/LightReforged/Portal.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 4. Breakdown Frames -->
-                        <h3 class="project-section-title">Effect Breakdown</h3>
+                        <h3 class="project-section-title">Wisps</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/LightReforgedVFX/Wisps_Poster.webp" aria-label="A glowing white wisp rising in a dark tiled room with drifting blue lights">
+                                <source src="Videos/LightReforged/Wisps.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Effect Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 1" data-lightbox>
-                                <p>Spawn / Ignition</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/LightReforgedVFX/LR_Still1_800.webp" data-full="Images/Renders/LightReforgedVFX/LR_Still1.webp" alt="Three cannons with different effects: a red cannon wreathed in flames, a green cannon with energy sparks and a blue cannon with a frosted glow" data-lightbox>
+                                <p>Cannon Switch</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 2" data-lightbox>
-                                <p>Peak / Mid</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/LightReforgedVFX/LR_Still2_800.webp" data-full="Images/Renders/LightReforgedVFX/LR_Still2.webp" alt="A blue circular portal with a swirling center and particles around its rim" data-lightbox>
+                                <p>Portal</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 3" data-lightbox>
-                                <p>Dissipation / End</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/LightReforgedVFX/LR_Still3_800.webp" data-full="Images/Renders/LightReforgedVFX/LR_Still3.webp" alt="A glowing white wisp rising in a dark tiled room with drifting blue lights" data-lightbox>
+                                <p>Wisp</p>
                             </div>
                         </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> The effects are mine. The cannon models were made by <a href="https://www.artstation.com/tikirivera" target="_blank" rel="noopener noreferrer">Jaime Rivera</a>.</p>
+
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> Houdini, Niagara (Unreal Engine)</li>
-                            <li><strong>Effect Type:</strong> Fire / Explosion / Magic etc.</li>
-                            <li><strong>Particle Count:</strong> ~10,000</li>
-                            <li><strong>Texture Sheet:</strong> 8x8 Flipbook, 2k</li>
-                            <li><strong>Engine:</strong> Unreal Engine 5</li>
-                            <li><strong>Timeframe:</strong> X days</li>
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Project:</strong> Light Reforged</li>
+                            <li><strong>Studio:</strong> Control Freak Studios</li>
+                            <li><strong>Software:</strong> Unreal Engine 5 (Niagara)</li>
+                            <li><strong>Year:</strong> 2024</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="vfx-showcase-reel">
             <button class="accordion-btn">
-                Project #2
+                VFX Showcase Reel
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/VFX/VFXShowcase/VFXShowcase_Hero.webp" alt="A green magic portal glowing at the end of a dim subway tunnel with a train visible inside it">
+                    <h2 class="project-hero-title">VFX Showcase Reel</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -167,81 +174,65 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            Description of the effect, what it's for, and the artistic intent.
+                            A reel of real-time effects I built in Unreal Engine 5 with Niagara, set in an abandoned subway station. It covers GPU sprite emitters for sparks, mesh emitters, lit magic particles, and a ribbon emitter meteor shower. It ends with a green portal that opens at the end of the tunnel, with a subway train and a nebula on the other side.
                         </p>
 
-                        <!-- 2. Video/Preview -->
-                        <h3 class="project-section-title">Preview</h3>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            This reel was built to show range: I worked through GPU sprite emitters for the sparks, mesh emitters for solid debris, lit particles for the magic effects, and a ribbon emitter for the meteor shower, each as its own Niagara system. The closing portal combined a shader-driven disc with layered particle rings, tuned in the subway set until the transition felt seamless.
+                        </p>
+
+                        <h3 class="project-section-title">Showcase Reel</h3>
                         <div class="viewer-embed">
-                            <!-- YouTube or Vimeo embed instead of Sketchfab -->
-                            <iframe title="Effect preview video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+                            <video controls playsinline preload="none" poster="Images/Renders/VFX/VFXShowcase/VFXShowcase_Poster.webp" aria-label="Real-time VFX reel set in an abandoned subway station, with sparks, a green portal and a nebula">
+                                <source src="Videos/VFX/VFXShowcase.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Technical Breakdown -->
-                        <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Node Graph" data-lightbox>
-                                <p>Node Graph / Setup</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Simulation" data-lightbox>
-                                <p>Simulation Settings</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Geometry / Emitters</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Sheet" data-lightbox>
-                                <p>Texture Sheet / Flipbook</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Breakdown Frames -->
-                        <h3 class="project-section-title">Effect Breakdown</h3>
+                        <h3 class="project-section-title">Effect Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 1" data-lightbox>
-                                <p>Spawn / Ignition</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/VFXShowcase/VFXShowcase_Still1_800.webp" data-full="Images/Renders/VFX/VFXShowcase/VFXShowcase_Still1.webp" alt="Orange sparks bursting from the floor of a dim subway station beside a police barrier" data-lightbox>
+                                <p>Sparks</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 2" data-lightbox>
-                                <p>Peak / Mid</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/VFXShowcase/VFXShowcase_Still2_800.webp" data-full="Images/Renders/VFX/VFXShowcase/VFXShowcase_Still2.webp" alt="A green portal at the end of a subway tunnel with a train inside it" data-lightbox>
+                                <p>Portal and Train</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 3" data-lightbox>
-                                <p>Dissipation / End</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/VFXShowcase/VFXShowcase_Still3_800.webp" data-full="Images/Renders/VFX/VFXShowcase/VFXShowcase_Still3.webp" alt="A subway car interior with a green nebula and stars visible through the open door" data-lightbox>
+                                <p>Nebula Beyond the Door</p>
                             </div>
                         </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> The subway environment, train, and other 3D assets are third-party. The nebula backgrounds are by Screaming Brain Studios (CC0). The effects are mine.</p>
+
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> Houdini, Niagara (Unreal Engine)</li>
-                            <li><strong>Effect Type:</strong> Fire / Explosion / Magic etc.</li>
-                            <li><strong>Particle Count:</strong> ~10,000</li>
-                            <li><strong>Texture Sheet:</strong> 8x8 Flipbook, 2k</li>
-                            <li><strong>Engine:</strong> Unreal Engine 5</li>
-                            <li><strong>Timeframe:</strong> X days</li>
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Software:</strong> Unreal Engine 5 (Niagara)</li>
+                            <li><strong>Type:</strong> Real-Time VFX Course Project</li>
+                            <li><strong>Year:</strong> 2024</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="chaos-cloth-simulation">
             <button class="accordion-btn">
-                Project #3
+                Chaos Cloth Simulation
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/VFX/ChaosSim/ChaosSim_Hero.webp" alt="A silver mannequin running through a ruined stone courtyard toward a group of armored characters">
+                    <h2 class="project-hero-title">Chaos Cloth Simulation</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -252,65 +243,499 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            Description of the effect, what it's for, and the artistic intent.
+                            Cloth simulations built with Unreal Engine 5 Chaos: five waving flags and cloth on an articulated character, shown in a ruined stone courtyard.
                         </p>
 
-                        <!-- 2. Video/Preview -->
-                        <h3 class="project-section-title">Preview</h3>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I set up Chaos cloth on the flags and the character's garment separately, tuning mass, stiffness, and wind response for each so the flags read as light fabric while the character cloth held its shape during movement. I ran the sims in the courtyard set and adjusted collision and damping until the motion looked natural rather than floaty or stiff.
+                        </p>
+
+                        <h3 class="project-section-title">Simulation Reel</h3>
                         <div class="viewer-embed">
-                            <!-- YouTube or Vimeo embed instead of Sketchfab -->
-                            <iframe title="Effect preview video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+                            <video controls playsinline preload="none" poster="Images/Renders/VFX/ChaosSim/ChaosSim_Poster.webp" aria-label="Reel of Unreal Engine 5 Chaos cloth simulations, waving flags and cloth on an articulated character">
+                                <source src="Videos/VFX/ChaosSim.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Technical Breakdown -->
-                        <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Node Graph" data-lightbox>
-                                <p>Node Graph / Setup</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Simulation" data-lightbox>
-                                <p>Simulation Settings</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Geometry / Emitters</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Sheet" data-lightbox>
-                                <p>Texture Sheet / Flipbook</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Breakdown Frames -->
-                        <h3 class="project-section-title">Effect Breakdown</h3>
+                        <h3 class="project-section-title">Effect Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 1" data-lightbox>
-                                <p>Spawn / Ignition</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/ChaosSim/ChaosSim_Still1_800.webp" data-full="Images/Renders/VFX/ChaosSim/ChaosSim_Still1.webp" alt="A silver mannequin running along a rocky path in a ruined courtyard" data-lightbox>
+                                <p>Running Through the Ruins</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 2" data-lightbox>
-                                <p>Peak / Mid</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/ChaosSim/ChaosSim_Still2_800.webp" data-full="Images/Renders/VFX/ChaosSim/ChaosSim_Still2.webp" alt="Armored characters and a silver mannequin in front of statues and blue flags, with a caption reading UE5 Chaos Simulation on an Articulated Character plus Waving Flags" data-lightbox>
+                                <p>Articulated Character and Flags</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Frame 3" data-lightbox>
-                                <p>Dissipation / End</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/ChaosSim/ChaosSim_Still3_800.webp" data-full="Images/Renders/VFX/ChaosSim/ChaosSim_Still3.webp" alt="A character in armor and red cloth standing in a stone doorway" data-lightbox>
+                                <p>Cloth on a Character</p>
                             </div>
                         </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> The environment and characters are third-party assets. The simulations are mine.</p>
+
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> Houdini, Niagara (Unreal Engine)</li>
-                            <li><strong>Effect Type:</strong> Fire / Explosion / Magic etc.</li>
-                            <li><strong>Particle Count:</strong> ~10,000</li>
-                            <li><strong>Texture Sheet:</strong> 8x8 Flipbook, 2k</li>
-                            <li><strong>Engine:</strong> Unreal Engine 5</li>
-                            <li><strong>Timeframe:</strong> X days</li>
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Software:</strong> Unreal Engine 5 (Chaos)</li>
+                            <li><strong>Type:</strong> Real-Time VFX Course Project</li>
+                            <li><strong>Year:</strong> 2024</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="chaos-destruction">
+            <button class="accordion-btn">
+                Chaos Destruction
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/VFX/Destruction/Destruction_Hero.webp" alt="A first-person view of a ruined stone fortress with stairs, arches and rocky cliffs">
+                    <h2 class="project-hero-title">Chaos Destruction</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            Destructible objects built with Unreal Engine 5 Chaos, shown in a first-person walk through a ruined fortress. The reel covers two destructible objects and a set of extra destructible objects.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I set up each object's fracture pattern in Chaos, tuning cluster sizes and stress thresholds so the pieces broke apart convincingly under impact rather than exploding uniformly. I tested the destructibles in the fortress set from a first-person perspective to make sure the debris felt physically grounded as the camera moved through it.
+                        </p>
+
+                        <h3 class="project-section-title">Destruction Reel</h3>
+                        <div class="viewer-embed">
+                            <video controls playsinline preload="none" poster="Images/Renders/VFX/Destruction/Destruction_Poster.webp" aria-label="First-person reel of Unreal Engine 5 Chaos destructible objects in a ruined fortress">
+                                <source src="Videos/VFX/Destruction.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Effect Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/Destruction/Destruction_Still1_800.webp" data-full="Images/Renders/VFX/Destruction/Destruction_Still1.webp" alt="A first-person view of stone stairs leading up to a ruined fortress with a broken object in the foreground" data-lightbox>
+                                <p>Fortress Approach</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/Destruction/Destruction_Still2_800.webp" data-full="Images/Renders/VFX/Destruction/Destruction_Still2.webp" alt="A first-person view down a ruined courtyard toward a large arched doorway" data-lightbox>
+                                <p>Courtyard</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/VFX/Destruction/Destruction_Still3_800.webp" data-full="Images/Renders/VFX/Destruction/Destruction_Still3.webp" alt="A first-person view of stone debris on stairs in front of a ruined arch" data-lightbox>
+                                <p>Debris</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> The environment and the weapon are third-party assets. The destructible objects and their simulations are mine.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Software:</strong> Unreal Engine 5 (Chaos)</li>
+                            <li><strong>Type:</strong> Real-Time VFX Course Project</li>
+                            <li><strong>Year:</strong> 2024</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="lobby">
+            <button class="accordion-btn">
+                Lobby
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Lobby/Lobby_Hero.webp" alt="Pandora's Party Box lobby, a marble platform with flaming braziers and a glowing golden box among white columns">
+                    <h2 class="project-hero-title">Lobby</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            VFX for the game's lobby: the flames rising from the braziers and the wisps of light that curl around Pandora's box.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I built the brazier flames and the box's wisps as separate VFX Graph systems, layering flame cores with sparks and heat distortion, and giving the wisps a curling path so they'd drift convincingly around the box. I tuned both in the lobby scene until they held up next to the other lit elements without overpowering the space.
+                        </p>
+
+                        <h3 class="project-section-title">Fire and Wisps</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/Lobby_FireWisps.webp" aria-label="Loop of the lobby VFX: rising brazier flames and wisps of light curling around the open box">
+                                <source src="Videos/PandorasPartyBox/Lobby_FireWisps.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Effect Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Lobby/Lobby_Still1_800.webp" data-full="Images/Renders/PandorasPartyBox/Lobby/Lobby_Still1.webp" alt="The lobby with four player characters on pedestals, flaming braziers and the glowing box" data-lightbox>
+                                <p>Lobby Overview</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Lobby/Lobby_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/Lobby/Lobby_Still2.webp" alt="Yellow and white wisps curling through the air around the open box in the lobby" data-lightbox>
+                                <p>Wisp Trails</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Lobby/Lobby_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/Lobby/Lobby_Still3.webp" alt="Tall columns of orange and red flame rising from the lobby braziers" data-lightbox>
+                                <p>Rising Flames</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> The golden glow on the chest in the center of the lobby was not made by me.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity (VFX Graph, Shader Graph)</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="shot-guesser">
+            <button class="accordion-btn">
+                Shot Guesser
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Posters/SG_Poof_Hero.webp" alt="A purple magic puff above the Shot Guesser tavern bar">
+                    <h2 class="project-hero-title">Shot Guesser</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            VFX for the Shot Guesser minigame, set in a tavern. The main effect is a purple magic poof, with sparkle bursts and a spotlight on each goblet during a player's turn.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I built the poof as a quick burst-and-fade particle system in VFX Graph, then layered in the sparkle bursts and a simple spotlight effect on the goblets using Shader Graph. Since these effects fire during a player's turn, I kept the timing short and readable so they wouldn't slow down the pace of the minigame.
+                        </p>
+
+                        <h3 class="project-section-title">Poof VFX</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/SG_Poof.webp" aria-label="Loop of the purple poof effect above the tavern bar">
+                                <source src="Videos/PandorasPartyBox/SG_Poof.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Poster.webp" aria-label="Gameplay preview of the Shot Guesser minigame showing the sparkle and smoke effects">
+                                <source src="Videos/PandorasPartyBox/ShotGuesser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Effect Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Still1_800.webp" data-full="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Still1.webp" alt="A white sparkle burst at the right end of the Shot Guesser bar" data-lightbox>
+                                <p>Sparkle Burst</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Still2.webp" alt="Purple magic puffs above the player characters at the bar" data-lightbox>
+                                <p>Purple Magic Puff</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/ShotGuesser/ShotGuesser_Still3.webp" alt="A beam of light over a goblet on the bar during a turn" data-lightbox>
+                                <p>Goblet Spotlight</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Dionysus character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity (VFX Graph, Shader Graph)</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="grape-stomp">
+            <button class="accordion-btn">
+                Grape Stomp
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Hero.webp" alt="Grape Stomp vineyard with four player characters stomping grapes in barrels on a wooden stage">
+                    <h2 class="project-hero-title">Grape Stomp</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            VFX and shaders for the Grape Stomp minigame, set in a vineyard. Effects include the wine streaming from the barrels into the bottles and the splashes that pool on the ground, plus atmosphere for the wider scene: rolling fog in the background, birds flying overhead, wind trails moving through the vines, a distant waterfall, and a wind shader on the foliage.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I built the wine stream as a looping particle system timed to the barrel animation, then layered in splash and puddle effects using VFX Graph and a shader for the pooling liquid. For the surrounding atmosphere, I used VFX Graph for the rolling fog, the birds, and the wind trails through the vines, and Shader Graph for the foliage's wind sway and the waterfall's surface. Getting the stream-to-splash timing to line up with the animation took the most iteration.
+                        </p>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Poster.webp" aria-label="Gameplay preview of the Grape Stomp minigame showing wine streaming into bottles">
+                                <source src="Videos/PandorasPartyBox/GrapeStomp.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Effect Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still1_800.webp" data-full="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still1.webp" alt="Wine streaming from the barrels down into bottles below the stage" data-lightbox>
+                                <p>Wine Streams</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still2.webp" alt="Purple wine splashes pooling on the ground under the stage" data-lightbox>
+                                <p>Splash and Puddles</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Still3.webp" alt="The full Grape Stomp scene with the vineyard behind the stage" data-lightbox>
+                                <p>Full Scene</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Level layout and most of the environmental props by <a href="https://www.artstation.com/vonni" target="_blank" rel="noopener noreferrer">Veronica Mauro</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity (VFX Graph, Shader Graph)</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="leopard-tug">
+            <button class="accordion-btn">
+                Leopard Tug
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Posters/LT_CollectionVortex_Hero.webp" alt="Red and blue collection vortex effects spinning above two open crates on a stone path">
+                    <h2 class="project-hero-title">Leopard Tug</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            VFX for the Leopard Tug minigame, set in a columned stone hall. The main effect is a collection vortex over each player's crate, in that player's color, and trails follow the players as they run.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            The collection vortex is a looping particle system recolored per player through material parameters, and the trails use a ribbon-style effect that follows each player's movement. I tuned both in the hall set so the colors stayed readable at a distance while players were running.
+                        </p>
+
+                        <h3 class="project-section-title">Collection Vortex</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/LT_CollectionVortex.webp" aria-label="Loop of red and blue vortex effects swirling above two open crates">
+                                <source src="Videos/PandorasPartyBox/LT_CollectionVortex.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Poster.webp" aria-label="Gameplay preview of the Leopard Tug minigame showing the player trails">
+                                <source src="Videos/PandorasPartyBox/LeopardTug.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Effect Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Still1_800.webp" data-full="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Still1.webp" alt="A yellow trail following a player character across the hall floor" data-lightbox>
+                                <p>Player Trails</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Still2.webp" alt="Several player characters leaving colored trails while running" data-lightbox>
+                                <p>Trails in Motion</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Still3.webp" alt="The Leopard Tug hall with players spread along the cobbled path" data-lightbox>
+                                <p>Hall Overview</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Leopard character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity (VFX Graph, Shader Graph)</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="hera-chase">
+            <button class="accordion-btn">
+                Hera Chase
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Posters/HC_IntroFog_Hero.webp" alt="Hera standing in a backlit doorway as white fog rolls across a tavern floor">
+                    <h2 class="project-hero-title">Hera Chase</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            VFX for the Hera Chase minigame and its introduction cutscene. In the intro, fog rolls across the floor as Hera appears in the doorway. In the minigame, purple energy swirls appear across the room, along with effects for Hera's staff attack and projectiles.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            The intro fog uses a volumetric-style particle system timed to Hera's entrance, while the energy swirls and projectile effects for the chase itself are separate VFX Graph systems built for quick readability during fast gameplay. I spent extra time tuning the fog's density and backlighting so the doorway reveal landed with the right amount of drama.
+                        </p>
+
+                        <h3 class="project-section-title">Intro Fog</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/HC_IntroFog.webp" aria-label="Loop of white fog rolling across a tavern floor in front of a backlit doorway with Hera standing in it">
+                                <source src="Videos/PandorasPartyBox/HC_IntroFog.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Poster.webp" aria-label="Gameplay preview of the Hera Chase minigame showing the purple energy swirls">
+                                <source src="Videos/PandorasPartyBox/HeraChase.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Effect Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Still1_800.webp" data-full="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Still1.webp" alt="A purple energy swirl on the tavern floor at the start of the chase" data-lightbox>
+                                <p>Energy Swirl</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Still2_800.webp" data-full="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Still2.webp" alt="A purple swirl near the player characters with a yellow ring beside it" data-lightbox>
+                                <p>Swirl in Play</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Still3_800.webp" data-full="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Still3.webp" alt="A yellow projectile spark crossing the room" data-lightbox>
+                                <p>Projectile Effect</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Hera character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>. Other environmental props by <a href="https://www.artstation.com/vonni" target="_blank" rel="noopener noreferrer">Veronica Mauro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> VFX Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity (VFX Graph, Shader Graph)</li>
+                            <li><strong>Year:</strong> 2026</li>
                         </ul>
                     </aside>
 
@@ -332,33 +757,35 @@
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
                 <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                <li class="nav-link"><a href="projects.html">Projects</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <hr class="line-break-footer">
-        <div class="footer-text">
-            <div class="footer-left">
-                <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="index.html"><img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" loading="lazy" width="400" height="400"></a>
                 <p class="footer-name">Will Clevenger</p>
-                <br>
-                <p class="footer-role">3D Artist</p>
-                <br>
-                <br>
+                <p class="footer-role">3D Artist &amp; Web Developer</p>
+                <p class="footer-blurb">Environment art, props, VFX and lighting for games, plus the occasional website.</p>
             </div>
-            <div class="footer-right">
-                <h2 class="footer-bold">Contact</h2>
-                <br>
+            <div class="footer-contact">
+                <h2 class="footer-heading">Get in Touch</h2>
                 <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
+                <a class="footer-cta" href="contact.html">Let's work together <span aria-hidden="true">&rarr;</span></a>
                 <div class="footer-social">
-                <ul>
-                    <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+                    <ul>
+                        <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="footer-social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-        </div>    
+        </div>
+        <hr class="line-break-footer footer-bottom-line">
+        <p class="footer-copyright">&copy; 2026 Will Clevenger. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
     </body>

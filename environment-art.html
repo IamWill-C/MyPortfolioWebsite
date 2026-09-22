@@ -13,11 +13,15 @@
         <link rel="stylesheet" href="https://use.typekit.net/hxb7miy.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kalam:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="Images/site/WC_favicon.png">
         <meta property="og:title" content="Will Clevenger - Environment Art">
         <meta property="og:description" content="Environment art projects by Will Clevenger (coming soon).">
-        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/WC_NewLogo.png">
+        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Render of a game-ready pirate cutlass by Will Clevenger, a 3D artist">
+        <meta name="twitter:card" content="summary_large_image">
         <meta property="og:url" content="https://iamwill-c.github.io/MyPortfolioWebsite/environment-art.html">
         <meta property="og:type" content="website">
     </head>
@@ -31,6 +35,7 @@
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                    <li class="nav-link"><a href="projects.html">Projects</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -40,6 +45,7 @@
                     <li class="social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li class="social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
                     <li class="social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
                 </ul>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
@@ -50,28 +56,26 @@
         </header>
         <nav class="sub-nav">
             <ul>
-                <li><a href="environment-art.html" class="active" aria-current="page">Environment</a></li>
-                <li><a href="prop-modeling.html">Props</a></li>
-                <li><a href="vfx-art.html">VFX</a></li>
-                <li><a href="lighting-art.html">Lighting</a></li>
+                <li><a href="environment-art.html" class="active" aria-current="page"><i class="fa-solid fa-tree" aria-hidden="true"></i>Environment</a></li>
+                <li><a href="prop-modeling.html"><i class="fa-solid fa-cubes" aria-hidden="true"></i>Props</a></li>
+                <li><a href="vfx-art.html"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>VFX</a></li>
+                <li><a href="lighting-art.html"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Lighting</a></li>
+                <li><a href="web-projects.html"><i class="fa-solid fa-globe" aria-hidden="true"></i>Web</a></li>
             </ul>
         </nav>
         <main id="main">
         <h1 class="sr-only">Environment Art</h1>
-        <div class="showcase">
-            <img src="Images/site/ComingSoon.webp" alt="Environment Art Showcase">
-            <h2 class="showcase-img-text">Here Is Environment Art!</h2>
-        </div>
-        <div class="accordion">
+        <div class="showcase"></div>
+        <div class="accordion" id="mushroom-house">
             <button class="accordion-btn">
-                Project #1
+                Mushroom House
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Hero.webp" alt="Render of the Mushroom House, a stylized house with a red spotted mushroom cap roof in a sunny meadow with trees">
+                    <h2 class="project-hero-title">Mushroom House</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -82,81 +86,83 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            This is where the description of the thing will go. If I had anything to say about it, lol.
+                            A stylized mushroom house with a red spotted cap, a wooden porch, a curved wooden door, and small mushrooms across its base. The model is 10,714 polys and took about 12 hours. All images were rendered in Unreal Engine.
                         </p>
 
-                        <!-- 2. 3D Viewer -->
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I began by blocking out the house in Maya and adding details such as the porch and small mushrooms. I subdivided the model and sculpted a high-poly version in ZBrush, then decimated it and textured the low-poly model in Substance 3D Painter with baking, masks, brushes, and generators. Finally, I imported the model and textures into Unreal Engine and set up the scene for the renders.
+                        </p>
+
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
-                            <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="Mushroom House" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                                data-src="https://sketchfab.com/models/717cfea897d64179a37240a96bc5bbd8/embed?autospin=1&autostart=1&preload=1&transparent=1">
+                                </iframe>
+                                <p class="sketchfab-text">
+                                    <a href="https://sketchfab.com/3d-models/mushroom-house-717cfea897d64179a37240a96bc5bbd8?utm_medium=embed&utm_campaign=share-popup&utm_content=717cfea897d64179a37240a96bc5bbd8" target="_blank" rel="nofollow" class="sketchfab-link"> Mushroom House </a>
+                                    by <a href="https://sketchfab.com/williamzc3?utm_medium=embed&utm_campaign=share-popup&utm_content=717cfea897d64179a37240a96bc5bbd8" target="_blank" rel="nofollow" class="sketchfab-link"> williamzc3 </a>
+                                    on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=717cfea897d64179a37240a96bc5bbd8" target="_blank" rel="nofollow" class="sketchfab-link">Sketchfab</a>
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- 3. Technical Breakdown -->
                         <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Wireframe / Topology</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="High Poly" data-lightbox>
-                                <p>High Poly Sculpt</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Low Poly" data-lightbox>
-                                <p>Game-Ready Low Poly</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Maps" data-lightbox>
-                                <p>Texture Maps (Albedo / Normal / Roughness / Metalness)</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Detail Shots -->
-                        <h3 class="project-section-title">Detail Shots</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 1" data-lightbox>
-                                <p>Detail Area 1</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Wireframe_800.webp" data-full="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Wireframe.webp" alt="Wireframe of the Mushroom House showing its low poly topology" data-lightbox>
+                                <p>Wireframe Render</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 2" data-lightbox>
-                                <p>Detail Area 2</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Untextured_800.webp" data-full="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Untextured.webp" alt="Untextured gray render of the Mushroom House" data-lightbox>
+                                <p>Untextured Render</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 3" data-lightbox>
-                                <p>Detail Area 3</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Textured_800.webp" data-full="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Textured.webp" alt="Textured render of the Mushroom House on a dark ground base" data-lightbox>
+                                <p>Textured Render</p>
+                            </div>
+                        </div>
+
+                        <h3 class="project-section-title">In-Engine Renders</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_InEngine001_800.webp" data-full="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_InEngine001.webp" alt="The Mushroom House in a sunny grassy clearing with pine and leafy trees behind it" data-lightbox>
+                                <p>In-Engine Render 1</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_InEngine002_800.webp" data-full="Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_InEngine002.webp" alt="The Mushroom House from the porch side, with a rock and leafy bushes in front of a forest" data-lightbox>
+                                <p>In-Engine Render 2</p>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> MS Paint</li>
-                            <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
-                            <li><strong>Texture Resolution:</strong> Seven 8k Texture Set</li>
-                            <li><strong>Timeframe:</strong> 69 days</li>
-                            <li><strong>Category:</strong> Prop Modeling</li>
+                            <li><strong>Software:</strong> Maya, ZBrush, Substance 3D Painter, Unreal Engine</li>
+                            <li><strong>Poly Count:</strong> 10,714 Polys</li>
+                            <li><strong>Renderer:</strong> Unreal Engine</li>
+                            <li><strong>Timeframe:</strong> ~12 hours</li>
+                            <li><strong>Category:</strong> Environment Prop</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="garden-shed">
             <button class="accordion-btn">
-                Project #2
+                Garden Shed
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Hero.webp" alt="Render of Garden S.H.E.D., a weathered octagonal shed with louvered wood walls, a round window and a paneled dome roof, on a dark backdrop">
+                    <h2 class="project-hero-title">Garden Shed</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -167,81 +173,83 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            This is where the description of the thing will go. If I had anything to say about it, lol.
+                            Garden S.H.E.D. is a weathered, colorful shed built for Project Gardener and completed in August 2025. It has an octagonal body of louvered wood panels, a round window with a planter box, a paneled dome roof, and posters and paint wear layered across its walls. The renders were made in Unreal Engine and Substance 3D Painter.
                         </p>
 
-                        <!-- 2. 3D Viewer -->
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I modeled the shed's octagonal body and louvered panels in Maya, then unwrapped the UVs and moved into Substance 3D Painter to build up the weathering, chipped paint, rust bleed, and layered poster decals, using masks and generators. I brought the finished model and textures into Unreal Engine for the final renders.
+                        </p>
+
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
-                            <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
-                        </div>
-
-                        <!-- 3. Technical Breakdown -->
-                        <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Wireframe / Topology</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="High Poly" data-lightbox>
-                                <p>High Poly Sculpt</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Low Poly" data-lightbox>
-                                <p>Game-Ready Low Poly</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Maps" data-lightbox>
-                                <p>Texture Maps (Albedo / Normal / Roughness / Metalness)</p>
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="Garden S.H.E.D." frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                                data-src="https://sketchfab.com/models/b6cc4d917b0c40a3a410137c5dcace01/embed?autospin=1&autostart=1&preload=1&transparent=1">
+                                </iframe>
+                                <p class="sketchfab-text">
+                                    <a href="https://sketchfab.com/3d-models/shed-b6cc4d917b0c40a3a410137c5dcace01?utm_medium=embed&utm_campaign=share-popup&utm_content=b6cc4d917b0c40a3a410137c5dcace01" target="_blank" rel="nofollow" class="sketchfab-link"> Garden S.H.E.D. </a>
+                                    by <a href="https://sketchfab.com/williamzc3?utm_medium=embed&utm_campaign=share-popup&utm_content=b6cc4d917b0c40a3a410137c5dcace01" target="_blank" rel="nofollow" class="sketchfab-link"> williamzc3 </a>
+                                    on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=b6cc4d917b0c40a3a410137c5dcace01" target="_blank" rel="nofollow" class="sketchfab-link">Sketchfab</a>
+                                </p>
                             </div>
                         </div>
 
-                        <!-- 4. Detail Shots -->
+                        <h3 class="project-section-title">Renders</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Overview_800.webp" data-full="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Overview.webp" alt="The full Garden S.H.E.D. on a dark backdrop with loose panels around its base" data-lightbox>
+                                <p>Overview Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/GardenShed/GardenShed_InEngine_800.webp" data-full="Images/Renders/EnvironmentArt/GardenShed/GardenShed_InEngine.webp" alt="The shed sitting in a shaded garden under leafy branches in Unreal Engine" data-lightbox>
+                                <p>In-Engine Render</p>
+                            </div>
+                        </div>
+
                         <h3 class="project-section-title">Detail Shots</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 1" data-lightbox>
-                                <p>Detail Area 1</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Detail001_800.webp" data-full="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Detail001.webp" alt="Close-up of the round window, planter box and posters on the shed wall" data-lightbox>
+                                <p>Window and Planter</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 2" data-lightbox>
-                                <p>Detail Area 2</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Detail002_800.webp" data-full="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Detail002.webp" alt="Close-up of the louvered wood panels, teal frame and rusted metal bands" data-lightbox>
+                                <p>Wall Paneling</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 3" data-lightbox>
-                                <p>Detail Area 3</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Detail003_800.webp" data-full="Images/Renders/EnvironmentArt/GardenShed/GardenShed_Detail003.webp" alt="Close-up of layered posters, chipped paint and the rusted base of the shed" data-lightbox>
+                                <p>Posters and Wear</p>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> MS Paint</li>
-                            <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
-                            <li><strong>Texture Resolution:</strong> Seven 8k Texture Set</li>
-                            <li><strong>Timeframe:</strong> 69 days</li>
-                            <li><strong>Category:</strong> Prop Modeling</li>
+                            <li><strong>Project:</strong> Project Gardener</li>
+                            <li><strong>Software:</strong> Maya, Substance 3D Painter, Unreal Engine</li>
+                            <li><strong>Poly Count:</strong> 14,544 Quads | 27,536 Tris</li>
+                            <li><strong>Category:</strong> Environment Prop</li>
+                            <li><strong>Completed:</strong> August 2025</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="shot-guesser">
             <button class="accordion-btn">
-                Project #3
+                Shot Guesser
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_BarCounter_Hero.webp" alt="Shot Guesser tavern bar with barrels, shelves of bottles and a long wooden counter">
+                    <h2 class="project-hero-title">Shot Guesser</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -252,65 +260,266 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            This is where the description of the thing will go. If I had anything to say about it, lol.
+                            Environment and props for the Shot Guesser minigame, a tavern with a long bar, barrels, and shelves of bottles. I handled the level layout as well as the props, including the chalices and the cocktail shaker.
                         </p>
 
-                        <!-- 2. 3D Viewer -->
-                        <h3 class="project-section-title">Interactive 3D Viewer</h3>
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I blocked out the tavern's layout in Unity first, bar placement, sightlines, and player paths, before modeling the bar counter, shelves, and barrels in Maya and texturing them in Substance 3D Painter. Once the props were in, I spent time walking the space in-engine to adjust spacing and dressing until the level read clearly from a player's seat at the bar.
+                        </p>
+
+                        <h3 class="project-section-title">Level Flythrough</h3>
                         <div class="viewer-embed">
-                            <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/Posters/SG_Flythrough.webp" aria-label="Camera flythrough of the Shot Guesser tavern along the bar and past the stools">
+                                <source src="Videos/PandorasPartyBox/SG_Flythrough.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <!-- 3. Technical Breakdown -->
-                        <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Wireframe / Topology</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="High Poly" data-lightbox>
-                                <p>High Poly Sculpt</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Low Poly" data-lightbox>
-                                <p>Game-Ready Low Poly</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Maps" data-lightbox>
-                                <p>Texture Maps (Albedo / Normal / Roughness / Metalness)</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Detail Shots -->
-                        <h3 class="project-section-title">Detail Shots</h3>
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Environment Frames</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 1" data-lightbox>
-                                <p>Detail Area 1</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_BarShelves_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/SG_BarShelves.webp" alt="Barrels and shelves of blue bottles behind the Shot Guesser bar" data-lightbox>
+                                <p>Barrels and Shelves</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 2" data-lightbox>
-                                <p>Detail Area 2</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_BarCounter_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/SG_BarCounter.webp" alt="The Shot Guesser bar counter with mugs, barrels and shelves" data-lightbox>
+                                <p>Bar Counter</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 3" data-lightbox>
-                                <p>Detail Area 3</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/SG_TavernWindow_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/SG_TavernWindow.webp" alt="A tavern corner with a lit window and a wooden table" data-lightbox>
+                                <p>Tavern Corner</p>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> MS Paint</li>
-                            <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
-                            <li><strong>Texture Resolution:</strong> Seven 8k Texture Set</li>
-                            <li><strong>Timeframe:</strong> 69 days</li>
-                            <li><strong>Category:</strong> Prop Modeling</li>
+                            <li><strong>Role:</strong> Environment Artist, Level Designer</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity, Maya, Substance 3D Painter</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="leopard-tug">
+            <button class="accordion-btn">
+                Leopard Tug
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Arcade_Hero.webp" alt="Leopard Tug stone arcade with warm light along a cobbled path and iron gates in the distance">
+                    <h2 class="project-hero-title">Leopard Tug</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            Environment and props for the Leopard Tug minigame, a columned stone hall opening onto a hillside vista, with a cobbled path, iron gates, and the collection crates. I handled the level layout and the props.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I started with the level's flow, a columned hall opening onto the hillside vista, blocking it out in Unity to get the sightlines and player paths right. I modeled the columns, gates, and crates in Maya, textured them in Substance 3D Painter, and then spent time in-engine tuning the layout so the vista read well from the play area.
+                        </p>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/LeopardTug/LeopardTug_Poster.webp" aria-label="Gameplay preview of the Leopard Tug minigame">
+                                <source src="Videos/PandorasPartyBox/LeopardTug.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Environment Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Vista_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/LT_Vista.webp" alt="A tiled rooftop in the foreground and a hillside with trees stretching to a mountain under a golden sky" data-lightbox>
+                                <p>Hillside Vista</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Arcade_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/LT_Arcade.webp" alt="A stone arcade with columns and a cobbled path leading toward iron gates" data-lightbox>
+                                <p>Stone Arcade</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/LT_Gate_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/LT_Gate.webp" alt="Iron gates with two open crates on a dirt path beside a stone wall" data-lightbox>
+                                <p>Gate and Crates</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Leopard character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> Environment Artist, Level Designer</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity, Maya, Substance 3D Painter</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="hera-chase">
+            <button class="accordion-btn">
+                Hera Chase
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/HC_TavernWide_Hero.webp" alt="Hera Chase tavern floor with rugs, tables, barrels and lanterns seen from above">
+                    <h2 class="project-hero-title">Hera Chase</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            Props and set dressing for the Hera Chase minigame, a crowded tavern floor with rugs, tables, barrels, and lanterns. I made about half of the props, including the power-ups, and dressed the set.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            For the props I was responsible for, like the power-ups, I modeled them in Maya and textured them in Substance 3D Painter. Set dressing came after: I placed rugs, tables, and barrels around the tavern floor in Unity, adjusting the arrangement until the space felt lived-in without crowding the play area.
+                        </p>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/HeraChase/HeraChase_Poster.webp" aria-label="Gameplay preview of the Hera Chase minigame">
+                                <source src="Videos/PandorasPartyBox/HeraChase.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Environment Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/HC_TavernWide_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/HC_TavernWide.webp" alt="Wide view of the Hera Chase tavern with rugs, low tables and scattered props" data-lightbox>
+                                <p>Tavern Overview</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/HC_TavernTable_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/HC_TavernTable.webp" alt="Close view of a tavern table, rug and props in the Hera Chase level" data-lightbox>
+                                <p>Set Dressing Detail</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Barrels_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Barrels.webp" alt="A group of wooden barrels holding blue and purple liquid" data-lightbox>
+                                <p>Props: Barrels</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Hera character art by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>. The rest of the environmental props by <a href="https://www.artstation.com/vonni" target="_blank" rel="noopener noreferrer">Veronica Mauro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> Prop Artist, Set Dresser</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity, Maya, Substance 3D Painter</li>
+                            <li><strong>Year:</strong> 2026</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="grape-stomp">
+            <button class="accordion-btn">
+                Grape Stomp
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/GS_Vineyard_Hero.webp" alt="Grape Stomp vineyard with a wooden stomping stage in front of terraced hills and mountains">
+                    <h2 class="project-hero-title">Grape Stomp</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            Terrain textures and props for the Grape Stomp minigame, a vineyard with a wooden stomping stage. I textured the terrain and made a few of the props, including the grape basin and the wine crate.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I textured the vineyard terrain in Unity, blending materials for the dirt path, grass, and terraced hills, then modeled and textured a handful of props, including the grape basin and wine crate, in Maya and Substance 3D Painter to round out the scene.
+                        </p>
+
+                        <h3 class="project-section-title">Gameplay Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Poster.webp" aria-label="Gameplay preview of the Grape Stomp minigame">
+                                <source src="Videos/PandorasPartyBox/GrapeStomp.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <!-- Frames -->
+                        <h3 class="project-section-title">Environment Frames</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/GS_Vineyard_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/GS_Vineyard.webp" alt="The Grape Stomp stage with four barrels, crates on both sides and a vineyard behind" data-lightbox>
+                                <p>Vineyard Stage</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_GrapeBasin_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_GrapeBasin.webp" alt="A wooden basin filled with purple grape mash" data-lightbox>
+                                <p>Props: Grape Basin</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Crates_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Crates.webp" alt="An open wine crate with bottle slots beside a second open crate lined with purple fabric" data-lightbox>
+                                <p>Props: Wine Crate</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Level layout and most of the environmental props by <a href="https://www.artstation.com/vonni" target="_blank" rel="noopener noreferrer">Veronica Mauro</a>. Animations by <a href="https://www.artstation.com/bennavarro" target="_blank" rel="noopener noreferrer">Benjamin Navarro</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Role:</strong> Terrain Texture Artist, Prop Artist</li>
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Unity, Maya, Substance 3D Painter</li>
+                            <li><strong>Year:</strong> 2026</li>
                         </ul>
                     </aside>
 
@@ -322,7 +531,7 @@
             <img class="lightbox-img" id="lightbox-img" alt="">
         </div>
         <div class="page-nav">
-            <a href="lighting-art.html" class="page-nav-prev">← Lighting</a>
+            <a href="web-projects.html" class="page-nav-prev">← Web</a>
             <a href="prop-modeling.html" class="page-nav-next">Props →</a>
         </div>
         </main>
@@ -332,33 +541,35 @@
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
                 <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                <li class="nav-link"><a href="projects.html">Projects</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <hr class="line-break-footer">
-        <div class="footer-text">
-            <div class="footer-left">
-                <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="index.html"><img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" loading="lazy" width="400" height="400"></a>
                 <p class="footer-name">Will Clevenger</p>
-                <br>
-                <p class="footer-role">3D Artist</p>
-                <br>
-                <br>
+                <p class="footer-role">3D Artist &amp; Web Developer</p>
+                <p class="footer-blurb">Environment art, props, VFX and lighting for games, plus the occasional website.</p>
             </div>
-            <div class="footer-right">
-                <h2 class="footer-bold">Contact</h2>
-                <br>
+            <div class="footer-contact">
+                <h2 class="footer-heading">Get in Touch</h2>
                 <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
+                <a class="footer-cta" href="contact.html">Let's work together <span aria-hidden="true">&rarr;</span></a>
                 <div class="footer-social">
-                <ul>
-                    <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+                    <ul>
+                        <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="footer-social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-        </div>    
+        </div>
+        <hr class="line-break-footer footer-bottom-line">
+        <p class="footer-copyright">&copy; 2026 Will Clevenger. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
     </body>

@@ -10,7 +10,7 @@
             display: flex;
             justify-content: center;
             background: var(--glass);
-            padding: 10px 0;
+            padding: 18px 0;
             position: sticky;
             top: var(--header-h);
             z-index: 99;
@@ -19,7 +19,7 @@
         .sub-nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 48px;
             margin: 0;
         }
 
@@ -29,22 +29,36 @@
             font-family: Montserrat, sans-serif;
             font-weight: 500;
             font-size: 18px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             position: relative;
             display: inline-block;
+            padding: 8px 6px;
+            transition: color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease;
+        }
+
+        .sub-nav ul li a i {
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .sub-nav ul li a:hover,
+        .sub-nav ul li a:focus-visible {
+            color: var(--accent);
+            transform: translateY(-2px);
         }
 
         /* Same cyan bar as the main nav: grows out from the centre on hover/focus and stays on the current page */
         .sub-nav ul li a::after {
             content: '';
             position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -5px;
+            left: 6px;
+            right: 6px;
+            bottom: -3px;
             height: 2px;
             border-radius: 2px;
             background: var(--accent);
+            box-shadow: 0 0 8px var(--accent);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -57,6 +71,8 @@
 
         .sub-nav ul li a.active {
             font-weight: bold;
+            color: var(--accent);
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
         }
 
 /* ==========================================================================
@@ -174,9 +190,32 @@
 }
 
 .accordion-btn.open {
-    background: rgba(0, 0, 0, 0.28);
     border-bottom: 2px solid var(--accent);
     border-radius: 10px 10px 0 0;
+    /* Stay visible under the sticky header and sub-nav while the section is open, so it can be closed from anywhere in it.
+       --subnav-h is measured by script.js. */
+    position: sticky;
+    top: calc(var(--header-h) + var(--subnav-h, 0px));
+    z-index: 98;
+    background: rgb(8, 58, 69);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button at the bottom of each open panel */
+.accordion-close-row {
+    padding: 0 20px 24px;
+    text-align: center;
+}
+
+.accordion-close {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .accordion-btn.open {
+        font-size: 22px;
+        padding: 14px 16px;
+    }
 }
 
 .accordion-icon {
@@ -197,7 +236,7 @@
 }
 
 .accordion-content.open {
-    max-height: 5000px;
+    max-height: 12000px;
     padding: 20px;
     overflow: visible;
     visibility: visible;
@@ -233,6 +272,11 @@
         pointer-events: none;
     }
 
+    /* Website screenshots already have their own text, so skip the title overlay and its dark fade */
+    .project-hero-plain::after {
+        display: none;
+    }
+
     .project-hero-title {
         z-index: 1;
         position: absolute;
@@ -266,7 +310,9 @@
         border-radius: 10px;
         padding: 20px;
         box-sizing: border-box;
-        top: calc(var(--header-h) + 80px);
+        top: calc(var(--header-h) + var(--subnav-h, 0px) + var(--accordion-h, 0px) + 20px);
+        max-height: calc(100vh - var(--header-h) - var(--subnav-h, 0px) - var(--accordion-h, 0px) - 40px);
+        overflow-y: auto;
     }
 
     .project-sidebar h3 {
@@ -346,6 +392,12 @@
         display: block;
     }
 
+    .viewer-embed video {
+        width: 100%;
+        display: block;
+        background: #000;
+    }
+
 /* Technical Breakdown Grid */
     .breakdown-grid {
         display: grid;
@@ -374,6 +426,16 @@
         font-family: Montserrat, sans-serif;
         font-weight: bold;
         font-size: 16px;
+    }
+
+/* A wide strip (such as a row of texture maps) that spans both breakdown columns */
+    .breakdown-item-wide {
+        grid-column: 1 / -1;
+    }
+
+    .breakdown-item-wide img {
+        height: auto;
+        aspect-ratio: 4 / 1;
     }
 
 /* Detail Shots */
@@ -436,7 +498,7 @@
     }
 
     .sub-nav ul {
-        gap: 10px;
+        gap: 16px;
         flex-wrap: wrap;
         justify-content: center;
         padding: 0 10px;
@@ -467,6 +529,29 @@
 
     .project-hero-title {
         font-size: 36px;
+    }
+
+    /* Show the whole render instead of a centre slice; the title stays available to screen readers */
+    .project-hero-render img {
+        height: auto;
+    }
+
+    .project-hero-render::after {
+        display: none;
+    }
+
+    .project-hero-render .project-hero-title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    /* Show the whole website screenshot instead of a narrow slice of it */
+    .project-hero-plain img {
+        height: auto;
     }
 
     .viewer-embed iframe {

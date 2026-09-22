@@ -8,16 +8,20 @@
         <link rel="stylesheet" href="css/project.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Will Clevenger - Prop Modeling</title>
-        <meta name="description" content="Game-ready prop modeling by Will Clevenger, including the Pirate Cutlass with an interactive 3D viewer and full technical breakdown.">
+        <meta name="description" content="Game-ready prop modeling by Will Clevenger, including the Pirate Cutlass and props for Light Reforged, each with a full technical breakdown.">
         <script src="https://kit.fontawesome.com/4e518d4c1d.js" crossorigin="anonymous" defer></script>
         <link rel="stylesheet" href="https://use.typekit.net/hxb7miy.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kalam:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="Images/site/WC_favicon.png">
         <meta property="og:title" content="Will Clevenger - Prop Modeling">
-        <meta property="og:description" content="Game-ready prop modeling by Will Clevenger, including the Pirate Cutlass with an interactive 3D viewer and full technical breakdown.">
-        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/WC_NewLogo.png">
+        <meta property="og:description" content="Game-ready prop modeling by Will Clevenger, including the Pirate Cutlass and props for Light Reforged, each with a full technical breakdown.">
+        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Render of a game-ready pirate cutlass by Will Clevenger, a 3D artist">
+        <meta name="twitter:card" content="summary_large_image">
         <meta property="og:url" content="https://iamwill-c.github.io/MyPortfolioWebsite/prop-modeling.html">
         <meta property="og:type" content="website">
     </head>
@@ -31,6 +35,7 @@
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                    <li class="nav-link"><a href="projects.html">Projects</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -40,6 +45,7 @@
                     <li class="social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li class="social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
                     <li class="social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
                 </ul>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
@@ -50,10 +56,11 @@
         </header>
         <nav class="sub-nav">
             <ul>
-                <li><a href="environment-art.html">Environment</a></li>
-                <li><a href="prop-modeling.html" class="active" aria-current="page">Props</a></li>
-                <li><a href="vfx-art.html">VFX</a></li>
-                <li><a href="lighting-art.html">Lighting</a></li>
+                <li><a href="environment-art.html"><i class="fa-solid fa-tree" aria-hidden="true"></i>Environment</a></li>
+                <li><a href="prop-modeling.html" class="active" aria-current="page"><i class="fa-solid fa-cubes" aria-hidden="true"></i>Props</a></li>
+                <li><a href="vfx-art.html"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>VFX</a></li>
+                <li><a href="lighting-art.html"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Lighting</a></li>
+                <li><a href="web-projects.html"><i class="fa-solid fa-globe" aria-hidden="true"></i>Web</a></li>
             </ul>
         </nav>
         <main id="main">
@@ -62,7 +69,7 @@
             <!-- <img src="Images/site/ComingSoon.webp" alt="Prop Art Showcase"> -->
             <!-- <h2 class="showcase-img-text">Here Is Prop Art!</h2> -->
         </div>
-        <div class="accordion">
+        <div class="accordion" id="pirate-cutlass">
             <button class="accordion-btn">
                 Pirate Cutlass
                 <span class="accordion-icon" aria-hidden="true">+</span>
@@ -82,17 +89,22 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            This Pirate Cutlass was created for an MMORPG, dubbed Project Darkwater, that I am developing with a small team. 
+                            This Pirate Cutlass was created for an MMORPG, dubbed Project Darkwater, that I am developing with a volunteer team of 21. 
                             The project is currently in pre-production, so this prop is not yet featured in any in-game scenes. 
                             However, it serves as a great example of the type of high-quality, game-ready assets I am capable of 
                             creating for use in real-time applications.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I blocked out the blade and grip proportions in Maya, then sculpted the edge wear and grip detail in ZBrush. After retopologizing to a game-ready low poly and laying out UVs, I baked the high-poly detail down and built the albedo, normal, roughness, and metalness maps in Substance Painter.
                         </p>
 
                         <!-- 2. 3D Viewer -->
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
                             <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <div class="sketchfab-embed-wrapper"> 
+                            <div class="sketchfab-embed-wrapper">
                                 <iframe title="Pirate Cutlass" frameborder="0" allowfullscreen 
                                 mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" 
                                 xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
@@ -162,16 +174,16 @@
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="candy-weapons">
             <button class="accordion-btn">
-                Project #2
+                Candy Weapons
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Hero.webp" alt="A red and white swirled peppermint shield leaning against a candy cane handled sword in a snowy stone scene">
+                    <h2 class="project-hero-title">Candy Weapons</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -182,81 +194,97 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            This is where the description of the thing will go. If I had anything to say about it, lol.
+                            A sword and shield styled after peppermint candy, made for an art challenge where it won 3rd place. The shield has a swirled red and white face edged in black, rusted metal, and the sword has a candy cane grip and a gold crossguard. The sword is 637 polys and the shield is 1,325 polys, and both took about 10 hours. All images were rendered in Unreal Engine.
                         </p>
 
-                        <!-- 2. 3D Viewer -->
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I started with the shield, building its basic structure before moving on to the sword, then refined both to match my vision. After subdividing the meshes, I sculpted finer detail in ZBrush. I decimated the sculpts and aligned the high-poly and low-poly meshes in Maya, UV mapped the models, and textured them in Substance Painter with folders, layers, masks, and generators before rendering in Unreal Engine.
+                        </p>
+
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
-                            <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="Candy Weapons" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                                data-src="https://sketchfab.com/models/00cc3334172449e6a30891fe7be4bd97/embed?autospin=1&autostart=1&preload=1&transparent=1">
+                                </iframe>
+                                <p class="sketchfab-text">
+                                    <a href="https://sketchfab.com/3d-models/candy-weapons-00cc3334172449e6a30891fe7be4bd97?utm_medium=embed&utm_campaign=share-popup&utm_content=00cc3334172449e6a30891fe7be4bd97" target="_blank" rel="nofollow" class="sketchfab-link"> Candy Weapons </a>
+                                    by <a href="https://sketchfab.com/williamzc3?utm_medium=embed&utm_campaign=share-popup&utm_content=00cc3334172449e6a30891fe7be4bd97" target="_blank" rel="nofollow" class="sketchfab-link"> williamzc3 </a>
+                                    on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=00cc3334172449e6a30891fe7be4bd97" target="_blank" rel="nofollow" class="sketchfab-link">Sketchfab</a>
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- 3. Technical Breakdown -->
                         <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Wireframe / Topology</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="High Poly" data-lightbox>
-                                <p>High Poly Sculpt</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Low Poly" data-lightbox>
-                                <p>Game-Ready Low Poly</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Maps" data-lightbox>
-                                <p>Texture Maps (Albedo / Normal / Roughness / Metalness)</p>
-                            </div>
-                        </div>
-
-                        <!-- 4. Detail Shots -->
-                        <h3 class="project-section-title">Detail Shots</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 1" data-lightbox>
-                                <p>Detail Area 1</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Textured001_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Textured001.webp" alt="Textured sword and shield styled after peppermint candy" data-lightbox>
+                                <p>Textured Render</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 2" data-lightbox>
-                                <p>Detail Area 2</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Untextured001_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Untextured001.webp" alt="Untextured gray sculpt of the sword and shield" data-lightbox>
+                                <p>Untextured Render</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 3" data-lightbox>
-                                <p>Detail Area 3</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Wireframe001_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Wireframe001.webp" alt="Wireframe of the sword and shield showing their low poly topology" data-lightbox>
+                                <p>Wireframe Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Textured002_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Textured002.webp" alt="Textured sword and shield from a closer angle" data-lightbox>
+                                <p>Textured Render, Alternate View</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Untextured002_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Untextured002.webp" alt="Untextured sculpt of the shield and sword from a closer angle" data-lightbox>
+                                <p>Untextured Render, Alternate View</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Wireframe002_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_Wireframe002.webp" alt="Wireframe of the shield and sword from a closer angle" data-lightbox>
+                                <p>Wireframe Render, Alternate View</p>
                             </div>
                         </div>
+
+                        <h3 class="project-section-title">In-Engine Renders</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_InEngine001_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_InEngine001.webp" alt="The shield and sword leaning against a stone wall in the snow" data-lightbox>
+                                <p>In-Engine Render 1</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/CandyWeapons/CandyWeapons_InEngine002_800.webp" data-full="Images/Renders/PropArt/CandyWeapons/CandyWeapons_InEngine002.webp" alt="The shield and sword seen from a lower angle in the snow" data-lightbox>
+                                <p>In-Engine Render 2</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Won 3rd place in the art challenge it was made for.</p>
 
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> MS Paint</li>
-                            <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
-                            <li><strong>Texture Resolution:</strong> Seven 8k Texture Set</li>
-                            <li><strong>Timeframe:</strong> 69 days</li>
-                            <li><strong>Category:</strong> Prop Modeling</li>
+                            <li><strong>Software:</strong> Maya, ZBrush, Substance 3D Painter, Unreal Engine</li>
+                            <li><strong>Poly Count:</strong> Sword 637 | Shield 1,325</li>
+                            <li><strong>Renderer:</strong> Unreal Engine</li>
+                            <li><strong>Timeframe:</strong> ~10 hours</li>
+                            <li><strong>Category:</strong> Weapon Modeling</li>
                         </ul>
                     </aside>
 
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id="rusted-armor">
             <button class="accordion-btn">
-                Project #3
+                Rusted Armor
                 <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-content">
-                <!-- 1. Hero / Beauty Shot -->
-                <section class="project-hero">
-                    <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Project Name Beauty Shot">
-                    <h2 class="project-hero-title">Project Name</h2>
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_Hero.webp" alt="A pile of rusted Norse-style armor: horned helms, bracers and pauldrons with worn metal and cloth wraps">
+                    <h2 class="project-hero-title">Rusted Armor</h2>
                 </section>
 
                 <!-- Project Body -->
@@ -267,65 +295,550 @@
 
                         <!-- Description -->
                         <p class="project-description">
-                            This is where the description of the thing will go. If I had anything to say about it, lol.
+                            A set of rusted Norse-style armor made for Light Reforged: three helms, three bracers, and two pauldrons, with a total of 14,849 polys. It took about 14 hours. The breakdown renders were made at 1920 by 1080 with the Arnold renderer, and the in-engine screenshots were captured in Unreal Engine.
                         </p>
 
-                        <!-- 2. 3D Viewer -->
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I gathered reference images of traditional Norse and Viking armor, modeled the pieces, and added finer detail. I placed the helms, bracers, and pauldrons on separate UDIMs, which gave three material sets. I sculpted dents and scratches in ZBrush, transferred the sculpted detail to the low-poly meshes in Substance 3D Painter, and applied colors, masks, and generators. Last, I imported the models and textures into Unreal Engine and set up materials so the pieces were ready for the designers to use.
+                        </p>
+
                         <h3 class="project-section-title">Interactive 3D Viewer</h3>
                         <div class="viewer-embed">
-                            <!-- Paste your Sketchfab or Marmoset embed iframe here -->
-                            <iframe title="Interactive 3D model viewer" data-src="https://sketchfab.com/models/MY_MODEL_ID/embed" allowfullscreen></iframe>
-                        </div>
-
-                        <!-- 3. Technical Breakdown -->
-                        <h3 class="project-section-title">Technical Breakdown</h3>
-                        <div class="breakdown-grid">
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Wireframe" data-lightbox>
-                                <p>Wireframe / Topology</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="High Poly" data-lightbox>
-                                <p>High Poly Sculpt</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Low Poly" data-lightbox>
-                                <p>Game-Ready Low Poly</p>
-                            </div>
-                            <div class="breakdown-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Texture Maps" data-lightbox>
-                                <p>Texture Maps (Albedo / Normal / Roughness / Metalness)</p>
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="Rusted Armor" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                                data-src="https://sketchfab.com/models/0f17b2d5f7f64ac287dda9a9d1eb7f9c/embed?autospin=1&autostart=1&preload=1&transparent=1">
+                                </iframe>
+                                <p class="sketchfab-text">
+                                    <a href="https://sketchfab.com/3d-models/rusted-armor-0f17b2d5f7f64ac287dda9a9d1eb7f9c?utm_medium=embed&utm_campaign=share-popup&utm_content=0f17b2d5f7f64ac287dda9a9d1eb7f9c" target="_blank" rel="nofollow" class="sketchfab-link"> Rusted Armor </a>
+                                    by <a href="https://sketchfab.com/williamzc3?utm_medium=embed&utm_campaign=share-popup&utm_content=0f17b2d5f7f64ac287dda9a9d1eb7f9c" target="_blank" rel="nofollow" class="sketchfab-link"> williamzc3 </a>
+                                    on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=0f17b2d5f7f64ac287dda9a9d1eb7f9c" target="_blank" rel="nofollow" class="sketchfab-link">Sketchfab</a>
+                                </p>
                             </div>
                         </div>
 
-                        <!-- 4. Detail Shots -->
-                        <h3 class="project-section-title">Detail Shots</h3>
+                        <h3 class="project-section-title">Helms (7,215 Polys)</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 1" data-lightbox>
-                                <p>Detail Area 1</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_HelmsTextured_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_HelmsTextured.webp" alt="Three textured rusted Viking-style helms, two with horns" data-lightbox>
+                                <p>Textured Render</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 2" data-lightbox>
-                                <p>Detail Area 2</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_HelmsUntextured_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_HelmsUntextured.webp" alt="Untextured white render of the three helms" data-lightbox>
+                                <p>Untextured Render</p>
                             </div>
                             <div class="detail-item">
-                                <img loading="lazy" decoding="async" src="Images/site/ComingSoon.webp" alt="Detail Shot 3" data-lightbox>
-                                <p>Detail Area 3</p>
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_HelmsWireframe_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_HelmsWireframe.webp" alt="Wireframe of the three helms" data-lightbox>
+                                <p>Wireframe Render</p>
+                            </div>
+                        </div>
+
+                        <h3 class="project-section-title">Bracers (2,690 Polys)</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_BracersTextured_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_BracersTextured.webp" alt="Three textured bracers with worn leather and cloth wraps" data-lightbox>
+                                <p>Textured Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_BracersUntextured_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_BracersUntextured.webp" alt="Untextured white render of the three bracers" data-lightbox>
+                                <p>Untextured Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_BracersWireframe_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_BracersWireframe.webp" alt="Wireframe of the three bracers" data-lightbox>
+                                <p>Wireframe Render</p>
+                            </div>
+                        </div>
+
+                        <h3 class="project-section-title">Pauldrons (6,282 Polys)</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_PauldronsTextured_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_PauldronsTextured.webp" alt="Two textured pauldrons with engraved patterns and scratched metal" data-lightbox>
+                                <p>Textured Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_PauldronsUntextured_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_PauldronsUntextured.webp" alt="Untextured white render of the two pauldrons" data-lightbox>
+                                <p>Untextured Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_PauldronsWireframe_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_PauldronsWireframe.webp" alt="Wireframe of the two pauldrons" data-lightbox>
+                                <p>Wireframe Render</p>
+                            </div>
+                        </div>
+
+                        <h3 class="project-section-title">In-Engine Screenshots</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_InEngine001_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_InEngine001.webp" alt="Armor pieces scattered across a pile of gold coins in Unreal Engine" data-lightbox>
+                                <p>In-Engine Screenshot 1</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/RustedArmor/RustedArmor_InEngine002_800.webp" data-full="Images/Renders/PropArt/RustedArmor/RustedArmor_InEngine002.webp" alt="Helms and armor pieces half-buried in gold beside a stone wall in Unreal Engine" data-lightbox>
+                                <p>In-Engine Screenshot 2</p>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- 5. Sidebar Specs -->
+                    <!-- Sidebar Specs -->
                     <aside class="project-sidebar">
                         <h3>Project Specs</h3>
                         <ul class="specs-list">
-                            <li><strong>Software:</strong> MS Paint</li>
-                            <li><strong>Poly Count:</strong> 1,000,000 Tris</li>
-                            <li><strong>Texture Resolution:</strong> Seven 8k Texture Set</li>
-                            <li><strong>Timeframe:</strong> 69 days</li>
-                            <li><strong>Category:</strong> Prop Modeling</li>
+                            <li><strong>Project:</strong> Light Reforged</li>
+                            <li><strong>Software:</strong> Maya, ZBrush, Substance 3D Painter, Unreal Engine</li>
+                            <li><strong>Renderer:</strong> Arnold (breakdown), Unreal Engine (in-engine)</li>
+                            <li><strong>Poly Count:</strong> 14,849 Polys</li>
+                            <li><strong>Timeframe:</strong> ~14 hours</li>
+                            <li><strong>Category:</strong> Armor Modeling</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="magic-potion">
+            <button class="accordion-btn">
+                Magic Potion
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/MagicPotion/MagicPotion_Hero.webp" alt="Five glowing teal potion bottles with orange liquid resting on a mossy rock in a dark scene">
+                    <h2 class="project-hero-title">Magic Potion</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            A stylized magic potion bottle made for the May 2025 Art Challenge and completed on May 30, 2025. It has a teal glazed body, a glowing yellow liquid, a leather and rope wrap at the neck, and a stone tag. The model is 16,434 quads (32,884 triangles), and the renders were made in Unreal Engine and Substance Painter.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            Working from Yuri Chuchmay's concept art, I modeled the bottle, neck wrap, and stone tag in Maya, then moved into Substance Painter to build up the glazed ceramic look and the leather and rope textures. I used an emissive mask to drive the glowing liquid, then brought the model and materials into Unreal Engine for the final renders.
+                        </p>
+
+                        <h3 class="project-section-title">Preview</h3>
+                        <div class="viewer-embed">
+                            <video controls muted loop playsinline preload="none" poster="Images/Renders/PropArt/MagicPotion/MagicPotion_Poster.webp" aria-label="Short loop of the Magic Potion bottle">
+                                <source src="Videos/MagicPotion.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <h3 class="project-section-title">Interactive 3D Viewer</h3>
+                        <div class="viewer-embed">
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="Magic Potion" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                                data-src="https://sketchfab.com/models/04db5a4942e84ca2827c12328447653d/embed?autospin=1&autostart=1&preload=1&transparent=1">
+                                </iframe>
+                                <p class="sketchfab-text">
+                                    <a href="https://sketchfab.com/3d-models/magic-potion-04db5a4942e84ca2827c12328447653d?utm_medium=embed&utm_campaign=share-popup&utm_content=04db5a4942e84ca2827c12328447653d" target="_blank" rel="nofollow" class="sketchfab-link"> Magic Potion </a>
+                                    by <a href="https://sketchfab.com/williamzc3?utm_medium=embed&utm_campaign=share-popup&utm_content=04db5a4942e84ca2827c12328447653d" target="_blank" rel="nofollow" class="sketchfab-link"> williamzc3 </a>
+                                    on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=04db5a4942e84ca2827c12328447653d" target="_blank" rel="nofollow" class="sketchfab-link">Sketchfab</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <h3 class="project-section-title">Renders</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/MagicPotion/MagicPotion_Studio_800.webp" data-full="Images/Renders/PropArt/MagicPotion/MagicPotion_Studio.webp" alt="The Magic Potion bottle on a soft gray backdrop" data-lightbox>
+                                <p>Studio Render</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/MagicPotion/MagicPotion_InEngine_800.webp" data-full="Images/Renders/PropArt/MagicPotion/MagicPotion_InEngine.webp" alt="The Magic Potion bottle with a glowing yellow liquid on a tiled floor in Unreal Engine" data-lightbox>
+                                <p>In-Engine Render</p>
+                            </div>
+                        </div>
+
+                        <h3 class="project-section-title">Detail Shots</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/MagicPotion/MagicPotion_Detail001_800.webp" data-full="Images/Renders/PropArt/MagicPotion/MagicPotion_Detail001.webp" alt="Close-up of the leather wrap, rope and stone tag on the Magic Potion bottle" data-lightbox>
+                                <p>Neck and Tag</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/MagicPotion/MagicPotion_Detail002_800.webp" data-full="Images/Renders/PropArt/MagicPotion/MagicPotion_Detail002.webp" alt="The Magic Potion bottle from a low angle on a tiled floor" data-lightbox>
+                                <p>Full Bottle</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/MagicPotion/MagicPotion_Group_800.webp" data-full="Images/Renders/PropArt/MagicPotion/MagicPotion_Group.webp" alt="Five Magic Potion bottles resting on a mossy rock" data-lightbox>
+                                <p>In a Scene</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Concept art by Yuri Chuchmay.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Project:</strong> May 2025 Art Challenge</li>
+                            <li><strong>Software:</strong> Maya, Substance 3D Painter, Unreal Engine</li>
+                            <li><strong>Poly Count:</strong> 16,434 Quads | 32,884 Tris</li>
+                            <li><strong>Category:</strong> Prop</li>
+                            <li><strong>Completed:</strong> May 2025</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="thor-totem">
+            <button class="accordion-btn">
+                Thor Totem
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero / Beauty Shot -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Scene001.webp" alt="Render of the Thor Totem, a carved white stone bust of a helmeted, bearded Thor with a hammer at its base, on a dark studio backdrop">
+                    <h2 class="project-hero-title">Thor Totem</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            A stone totem of Thor made for Light Reforged. It features a helmeted, bearded face, carved knotwork across the body, and a hammer at its base, with weathered white stone and red staining near the foot. The model is game-ready at 14,954 triangles with a single 2K PBR texture set.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I sculpted the totem's form and knotwork directly in ZBrush, then retopologized it into a clean game-ready mesh and unwrapped the UVs. I baked the high-poly detail onto the low poly and built the base color, normal, roughness, and height maps in Substance 3D Painter, finishing with renders in Blender Cycles and an import pass into Unreal Engine 5.
+                        </p>
+
+                        <!-- 2. Technical Breakdown -->
+                        <h3 class="project-section-title">Technical Breakdown</h3>
+                        <div class="breakdown-grid">
+                            <div class="breakdown-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Wireframe001_800.webp" data-full="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Wireframe001.webp" alt="Triangulated wireframe of the Thor Totem in cyan lines on a dark background" data-lightbox>
+                                <p>Wireframe / Topology</p>
+                            </div>
+                            <div class="breakdown-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Beauty001.webp" alt="Textured Thor Totem seen from the front at an angle, showing the carved helmet, beard and knotwork" data-lightbox>
+                                <p>Game-Ready Textured Model</p>
+                            </div>
+                            <div class="breakdown-item breakdown-item-wide">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotem_Textures_800.webp" data-full="Images/Renders/PropArt/ThorTotem/ThorTotem_Textures.webp" alt="Base color, normal, roughness and height texture maps for the Thor Totem, side by side" data-lightbox>
+                                <p>Texture Maps (Base Color / Normal / Roughness / Height)</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Detail Shots -->
+                        <h3 class="project-section-title">Detail Shots</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Detail001_800.webp" data-full="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Detail001.webp" alt="Close-up of the Thor Totem face, showing the helmet with star patterns, closed eyes and carved beard" data-lightbox>
+                                <p>Face and Helmet</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Detail002_800.webp" data-full="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Detail002.webp" alt="Close-up of the Thor Totem body, showing carved knotwork, the hammer and the red-stained base" data-lightbox>
+                                <p>Body Carving and Base</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Detail003_800.webp" data-full="Images/Renders/PropArt/ThorTotem/ThorTotemRender_Detail003.webp" alt="Rear three-quarter view of the Thor Totem" data-lightbox>
+                                <p>Rear View</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 4. Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Project:</strong> Light Reforged</li>
+                            <li><strong>Software:</strong> ZBrush, Substance 3D Painter</li>
+                            <li><strong>Renders:</strong> Blender (Cycles)</li>
+                            <li><strong>Engine:</strong> Unreal Engine 5</li>
+                            <li><strong>Poly Count:</strong> 14,954 Tris</li>
+                            <li><strong>Texture Resolution:</strong> 2K Texture Set</li>
+                            <li><strong>Category:</strong> Environment Prop</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="steampunk-scooter">
+            <button class="accordion-btn">
+                Steampunk Scooter
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero / Beauty Shot -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Scene001.webp" alt="Render of the Steampunk Scooter, a yellow riveted scooter with a red seat, round headlamp and a torpedo-shaped tank at the rear">
+                    <h2 class="project-hero-title">Steampunk Scooter</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            A steampunk scooter prop made for Light Reforged, with riveted yellow panels, a padded red seat, a round headlamp, and a rear torpedo-shaped tank. Chipped paint and worn rubber give it a used look. The model is game-ready at 23,851 triangles and uses a 2K texture set with packed occlusion, roughness, and metallic maps.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I built the scooter's body and mechanical details in Maya with beveled edges for a clean hard-surface look, then unwrapped the UVs and textured it in Substance 3D Painter, using masks and generators to add the chipped paint and worn rubber before baking a packed occlusion-roughness-metallic map. I rendered the breakdown in Blender Cycles and brought the finished asset into Unreal Engine 5.
+                        </p>
+
+                        <!-- 2. Technical Breakdown -->
+                        <h3 class="project-section-title">Technical Breakdown</h3>
+                        <div class="breakdown-grid">
+                            <div class="breakdown-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Wireframe001_800.webp" data-full="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Wireframe001.webp" alt="Triangulated wireframe of the Steampunk Scooter in cyan lines on a dark background" data-lightbox>
+                                <p>Wireframe / Topology</p>
+                            </div>
+                            <div class="breakdown-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Beauty001.webp" alt="Textured Steampunk Scooter seen from the other side, showing the rear tank and front wheel" data-lightbox>
+                                <p>Game-Ready Textured Model</p>
+                            </div>
+                            <div class="breakdown-item breakdown-item-wide">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooter_Textures_800.webp" data-full="Images/Renders/PropArt/SteampunkScooter/SteampunkScooter_Textures.webp" alt="Base color, normal, packed occlusion-roughness-metallic and roughness texture maps for the Steampunk Scooter, side by side" data-lightbox>
+                                <p>Texture Maps (Base Color / Normal / Packed ORM / Roughness)</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Detail Shots -->
+                        <h3 class="project-section-title">Detail Shots</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Detail001_800.webp" data-full="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Detail001.webp" alt="Close-up of the Steampunk Scooter headlamp, handlebar and red seat" data-lightbox>
+                                <p>Headlamp and Seat</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Detail002_800.webp" data-full="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Detail002.webp" alt="Close-up of the Steampunk Scooter rear tank, side lamp and wheel with its spring" data-lightbox>
+                                <p>Wheel and Tank</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Detail003_800.webp" data-full="Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Detail003.webp" alt="Rear three-quarter view of the Steampunk Scooter" data-lightbox>
+                                <p>Rear View</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 4. Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Project:</strong> Light Reforged</li>
+                            <li><strong>Software:</strong> Maya, Substance 3D Painter</li>
+                            <li><strong>Renders:</strong> Blender (Cycles)</li>
+                            <li><strong>Engine:</strong> Unreal Engine 5</li>
+                            <li><strong>Poly Count:</strong> 23,851 Tris</li>
+                            <li><strong>Texture Resolution:</strong> 2K Texture Set</li>
+                            <li><strong>Category:</strong> Steampunk Vehicle Prop</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="steampunk-carriage">
+            <button class="accordion-btn">
+                Steampunk Carriage
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero / Beauty Shot -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Scene001.webp" alt="Render of the Steampunk Carriage, a yellow open carriage with a quilted red seat, curved roof, brass lamps and a horizontal tank on the hood">
+                    <h2 class="project-hero-title">Steampunk Carriage</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            A steampunk carriage prop made for Light Reforged, with a quilted red seat, a curved roof, brass lamps, exposed pipework, and a horizontal tank across the hood. The model is game-ready at 33,948 triangles and uses a 4K texture set that includes an emissive map.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            I modeled the carriage's body, roof, and pipework in Maya, keeping the hard-surface edges clean for baking. In Substance 3D Painter I textured the panels with masks and generators for wear, and added an emissive map for the brass lamps, before rendering the breakdown in Blender Cycles and bringing the finished asset into Unreal Engine 5.
+                        </p>
+
+                        <!-- 2. Technical Breakdown -->
+                        <h3 class="project-section-title">Technical Breakdown</h3>
+                        <div class="breakdown-grid">
+                            <div class="breakdown-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Wireframe001_800.webp" data-full="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Wireframe001.webp" alt="Triangulated wireframe of the Steampunk Carriage in cyan lines on a dark background" data-lightbox>
+                                <p>Wireframe / Topology</p>
+                            </div>
+                            <div class="breakdown-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Beauty001_800.webp" data-full="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Beauty001.webp" alt="Textured Steampunk Carriage seen from the front at an angle from the other side" data-lightbox>
+                                <p>Game-Ready Textured Model</p>
+                            </div>
+                            <div class="breakdown-item breakdown-item-wide">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriage_Textures_800.webp" data-full="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriage_Textures.webp" alt="Base color, normal, packed occlusion-roughness-metallic and emissive texture maps for the Steampunk Carriage, side by side" data-lightbox>
+                                <p>Texture Maps (Base Color / Normal / Packed ORM / Emissive)</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Detail Shots -->
+                        <h3 class="project-section-title">Detail Shots</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Detail001_800.webp" data-full="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Detail001.webp" alt="Close-up of the Steampunk Carriage quilted red seat under its curved roof" data-lightbox>
+                                <p>Seat and Roof</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Detail002_800.webp" data-full="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Detail002.webp" alt="Close-up of the Steampunk Carriage side pipework, lamp and spoked wheel" data-lightbox>
+                                <p>Pipework and Wheel</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Detail003_800.webp" data-full="Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Detail003.webp" alt="Rear three-quarter view of the Steampunk Carriage" data-lightbox>
+                                <p>Rear View</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 4. Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Project:</strong> Light Reforged</li>
+                            <li><strong>Software:</strong> Maya, Substance 3D Painter</li>
+                            <li><strong>Renders:</strong> Blender (Cycles)</li>
+                            <li><strong>Engine:</strong> Unreal Engine 5</li>
+                            <li><strong>Poly Count:</strong> 33,948 Tris</li>
+                            <li><strong>Texture Resolution:</strong> 4K Texture Set</li>
+                            <li><strong>Category:</strong> Steampunk Vehicle Prop</li>
+                        </ul>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="pandoras-party-box-props">
+            <button class="accordion-btn">
+                Pandora's Party Box Props
+                <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-content">
+                <!-- 1. Hero -->
+                <section class="project-hero project-hero-render">
+                    <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Chalices_Hero.webp" alt="Four dark marble chalices with gold rims and Greek key patterns, made for Pandora's Party Box">
+                    <h2 class="project-hero-title">Pandora's Party Box Props</h2>
+                </section>
+
+                <!-- Project Body -->
+                <div class="project-body">
+
+                    <!-- Main Content -->
+                    <div class="project-main">
+
+                        <!-- Description -->
+                        <p class="project-description">
+                            Props made for the minigames in Pandora's Party Box, including the Shot Guesser chalices and cocktail shaker,
+                            the Leopard Tug collection crate, the Grape Stomp wine crate and grape basin, the Hera Chase power-ups, and
+                            the playing cards and chips for Casino Olympus. I made about half of the props in Hera Chase and a few in Grape Stomp. I also made the poisoned chalice icon.
+                        </p>
+
+                        <h3 class="project-section-title">My Process</h3>
+                        <p class="project-description">
+                            Each prop went through the same pipeline: block out proportions and silhouette in Maya, sculpt detail where needed in ZBrush, then unwrap and texture in Substance 3D Painter before importing into Unity. Working across a batch like this meant keeping shared texture sets and modular pieces wherever I could, so the props stayed consistent and fit the project's budget.
+                        </p>
+
+                        <!-- Gallery -->
+                        <h3 class="project-section-title">Props</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Chalices_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Chalices.webp" alt="Four dark marble chalices with gold rims and Greek key patterns" data-lightbox>
+                                <p>Shot Chalices</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_PoisonChalice_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_PoisonChalice.webp" alt="A chalice with a skull and crossbones inside a round Greek key border, used as an icon" data-lightbox>
+                                <p>Poisoned Chalice Icon</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Shaker_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Shaker.webp" alt="A white and purple marble cocktail shaker with Greek key bands" data-lightbox>
+                                <p>Cocktail Shaker</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Crates_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Crates.webp" alt="An open wine crate with bottle slots beside an open crate lined with purple fabric" data-lightbox>
+                                <p>Collection and Wine Crates</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_GrapeBasin_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_GrapeBasin.webp" alt="A wooden basin filled with purple grape mash" data-lightbox>
+                                <p>Grape Basin</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_PowerUps_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_PowerUps.webp" alt="Three power-up props: a speedometer badge, a shield and a horseshoe magnet" data-lightbox>
+                                <p>Hera Chase Power-Ups</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Couch_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Couch.webp" alt="A dark wooden couch with purple upholstery and red and blue cushions" data-lightbox>
+                                <p>Lounge Couch</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Barrels_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Barrels.webp" alt="Wooden barrels holding blue and purple liquid" data-lightbox>
+                                <p>Barrels</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_TableLamp_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_TableLamp.webp" alt="A round wooden table with a brass lamp on top" data-lightbox>
+                                <p>Table with Lamp</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_TableMarble_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_TableMarble.webp" alt="A marble-topped table with a Greek key border and a brass incense stand" data-lightbox>
+                                <p>Marble Table</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_Chips_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_Chips.webp" alt="A pile of casino chips, each with a different Greek symbol" data-lightbox>
+                                <p>Casino Chips</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_CardFaces_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_CardFaces.webp" alt="Rows of illustrated face cards" data-lightbox>
+                                <p>Face Cards</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_CardDeck_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_CardDeck.webp" alt="Rows of number cards for each suit" data-lightbox>
+                                <p>Card Deck</p>
+                            </div>
+                            <div class="detail-item">
+                                <img loading="lazy" decoding="async" src="Images/Renders/PandorasPartyBox/Deck/Prop_CardHand_800.webp" data-full="Images/Renders/PandorasPartyBox/Deck/Prop_CardHand.webp" alt="A hand of playing cards fanned out, from nine to ace" data-lightbox>
+                                <p>Playing Cards</p>
+                            </div>
+                        </div>
+
+                        <p class="project-credits"><strong>Credits:</strong> Face card artwork by <a href="https://www.artstation.com/katelynnreyes8" target="_blank" rel="noopener noreferrer">Katelynn Reyes</a>.</p>
+
+                    </div>
+
+                    <!-- Sidebar Specs -->
+                    <aside class="project-sidebar">
+                        <h3>Project Specs</h3>
+                        <ul class="specs-list">
+                            <li><strong>Project:</strong> Pandora's Party Box</li>
+                            <li><strong>Studio:</strong> A Square Games &amp; Simulation</li>
+                            <li><strong>Engine:</strong> Unity</li>
+                            <li><strong>Software:</strong> Maya, ZBrush, Substance 3D Painter</li>
+                            <li><strong>Category:</strong> Game Props</li>
+                            <li><strong>Role:</strong> Prop Artist</li>
                         </ul>
                     </aside>
 
@@ -347,33 +860,35 @@
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
                 <li class="nav-link"><a href="portfolio.html" aria-current="true">Portfolio</a></li>
+                <li class="nav-link"><a href="projects.html">Projects</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <hr class="line-break-footer">
-        <div class="footer-text">
-            <div class="footer-left">
-                <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="index.html"><img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" loading="lazy" width="400" height="400"></a>
                 <p class="footer-name">Will Clevenger</p>
-                <br>
-                <p class="footer-role">3D Artist</p>
-                <br>
-                <br>
+                <p class="footer-role">3D Artist &amp; Web Developer</p>
+                <p class="footer-blurb">Environment art, props, VFX and lighting for games, plus the occasional website.</p>
             </div>
-            <div class="footer-right">
-                <h2 class="footer-bold">Contact</h2>
-                <br>
+            <div class="footer-contact">
+                <h2 class="footer-heading">Get in Touch</h2>
                 <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
+                <a class="footer-cta" href="contact.html">Let's work together <span aria-hidden="true">&rarr;</span></a>
                 <div class="footer-social">
-                <ul>
-                    <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+                    <ul>
+                        <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="footer-social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-        </div>    
+        </div>
+        <hr class="line-break-footer footer-bottom-line">
+        <p class="footer-copyright">&copy; 2026 Will Clevenger. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
     </body>

@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <script>if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("reveal-ready");</script>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
@@ -13,11 +14,15 @@
         <link rel="stylesheet" href="https://use.typekit.net/hxb7miy.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kalam:wght@700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="Images/site/WC_favicon.png">
         <meta property="og:title" content="Will Clevenger - 3D Artist">
         <meta property="og:description" content="Portfolio of Will Clevenger, a 3D artist specializing in environment art, prop modeling, VFX and lighting for games.">
-        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/WC_NewLogo.png">
+        <meta property="og:image" content="https://iamwill-c.github.io/MyPortfolioWebsite/Images/site/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Render of a game-ready pirate cutlass by Will Clevenger, a 3D artist">
+        <meta name="twitter:card" content="summary_large_image">
         <meta property="og:url" content="https://iamwill-c.github.io/MyPortfolioWebsite/index.html">
         <meta property="og:type" content="website">
     </head>
@@ -31,6 +36,7 @@
                 <ul class="page-links">
                     <li class="nav-link"><a href="index.html" aria-current="page">Home</a></li>
                     <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-link"><a href="projects.html">Projects</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li class="nav-link"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -40,6 +46,7 @@
                     <li class="social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li class="social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
                     <li class="social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
                 </ul>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
@@ -50,16 +57,45 @@
         </header>
         <main id="main">
         <section class="home-content">
-            <div class="home-intro">
-                <h1>
-                    Will Clevenger
-                </h1>
-                <p class="home-tagline">
-                    3D Artist | Environment Art, Props, VFX & Lighting
-                </p>
-                <p class="home-subtagline">
-                    Web Developer
-                </p>
+            <div class="home-hero">
+                <div class="home-intro" data-reveal>
+                    <a class="availability" href="contact.html"><span class="availability-dot" aria-hidden="true"></span>Available for work</a>
+                    <h1>
+                        Will Clevenger
+                    </h1>
+                    <p class="home-tagline">
+                        3D Artist | Environment Art, Props, VFX & Lighting
+                    </p>
+                    <p class="home-subtagline">
+                        Web Developer
+                    </p>
+                </div>
+                <figure class="hero-visual hero-carousel" data-reveal aria-label="Featured work carousel">
+                    <div class="hero-carousel-frame">
+                        <img class="hero-carousel-img is-active" id="heroCarouselImgA" src="Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001.webp" alt="Render of the Pirate Cutlass, a curved blade with a brown wrapped grip and hand guard, lit against a dark grey backdrop">
+                        <img class="hero-carousel-img" id="heroCarouselImgB" alt="">
+                        <button type="button" class="hero-carousel-arrow hero-carousel-prev" id="heroCarouselPrev" aria-label="Previous piece">
+                            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="hero-carousel-arrow hero-carousel-next" id="heroCarouselNext" aria-label="Next piece">
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="hero-carousel-pause" id="heroCarouselPause" aria-label="Pause carousel" aria-pressed="false">
+                            <i class="fa-solid fa-pause hero-carousel-pause-icon" aria-hidden="true"></i>
+                            <i class="fa-solid fa-play hero-carousel-play-icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <figcaption id="heroCarouselCaption">
+                        <span class="hero-carousel-text">
+                            <strong id="heroCarouselTitle">Pirate Cutlass</strong>
+                            <span class="hero-carousel-category" id="heroCarouselCategory">Prop Modeling</span>
+                        </span>
+                        <span class="hero-carousel-count" id="heroCarouselCount" aria-hidden="true"></span>
+                    </figcaption>
+                    <a class="project-link-btn hero-carousel-btn" id="heroCarouselBtn" href="prop-modeling.html#pirate-cutlass">
+                        View This Piece <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </figure>
             </div>
             <hr class="line-break">
             <div>
@@ -68,25 +104,73 @@
                 </h2>
             </div>
             <div class="featured-work">
-                <div class="featured-item">
-                    <a href="environment-art.html"><img src="Images/site/ComingSoon.webp" alt="View Environment Art projects"></a>
+                <div class="featured-item" data-reveal>
+                    <a href="environment-art.html"><img src="Images/site/Tile_Environment.webp" alt="View Environment Art projects" width="600" height="600"></a>
                     <h3>Environment Art</h3>
-                    <h4>Placeholder Text</h4>
+                    <h4>Pandora's Party Box</h4>
                 </div>
-                <div class="featured-item">
-                    <a href="prop-modeling.html"><img src="Images/site/ComingSoon.webp" alt="View Prop Modeling projects"></a>
+                <div class="featured-item" data-reveal>
+                    <a href="prop-modeling.html"><img src="Images/site/Tile_Props.webp" alt="View Prop Modeling projects" width="600" height="600"></a>
                     <h3>Prop Modeling</h3>
-                    <h4>Placeholder Text</h4>
+                    <h4>Light Reforged and more</h4>
                 </div>
-                <div class="featured-item">
-                    <a href="vfx-art.html"><img src="Images/site/ComingSoon.webp" alt="View VFX Art projects"></a>
+                <div class="featured-item" data-reveal>
+                    <a href="vfx-art.html"><img src="Images/site/Tile_VFX.webp" alt="View VFX Art projects" width="600" height="600"></a>
                     <h3>VFX Art</h3>
-                    <h4>Placeholder Text</h4>
+                    <h4>Pandora's Party Box</h4>
                 </div>
-                <div class="featured-item">
-                    <a href="lighting-art.html"><img src="Images/site/ComingSoon.webp" alt="View Lighting Art projects"></a>
+                <div class="featured-item" data-reveal>
+                    <a href="lighting-art.html"><img src="Images/site/Tile_Lighting.webp" alt="View Lighting Art projects" width="600" height="600"></a>
                     <h3>Lighting Art</h3>
-                    <h4>Placeholder Text</h4>
+                    <h4>Pandora's Party Box</h4>
+                </div>
+            </div>
+            <hr class="line-break">
+            <div class="currently-building" data-reveal>
+                <h2 class="featured-title">
+                    Currently Building
+                </h2>
+                <div class="building-grid">
+                    <div class="building-card">
+                        <span class="building-status">In pre-production</span>
+                        <h3>Project Darkwater</h3>
+                        <p>
+                            A free-to-play pirate MMORPG revival built by a volunteer team of 21. As creative lead
+                            and sole web developer, I work on the game's art and build its website.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-link-btn" href="prop-modeling.html">See the Cutlass Prop&nbsp;&rarr;</a>
+                            <a class="project-link-btn" href="web-projects.html">See the Website&nbsp;&rarr;</a>
+                            <a class="project-link-btn project-link-icon" href="https://www.linkedin.com/company/projectdarkwater/posts/" target="_blank" rel="noopener noreferrer" aria-label="Project Darkwater on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="building-card">
+                        <span class="building-status">In production</span>
+                        <h3>Project Gardener</h3>
+                        <p>
+                            A route-focused movement shooter built around speedrunning, developed with Original Bug Games.
+                            I work as the 3D artist, VFX artist, and sole web developer. The team has attended showcases
+                            and occasionally conducts virtual QA testing.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-link-btn" href="web-projects.html">See the Website&nbsp;&rarr;</a>
+                            <a class="project-link-btn project-link-icon" href="https://www.linkedin.com/company/original-bug-games/posts/" target="_blank" rel="noopener noreferrer" aria-label="Original Bug Games on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="building-card">
+                        <span class="building-status">In testing</span>
+                        <h3>Well Versed</h3>
+                        <p>
+                            A mobile word puzzle game with themed word packs, a daily puzzle, and coin-based hints.
+                            I am the sole developer, building it with React Native and Supabase.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-link-btn" href="projects.html#well-versed">Read More&nbsp;&rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-links building-more">
+                    <a class="project-link-btn" href="projects.html">View All Projects&nbsp;&rarr;</a>
                 </div>
             </div>
         </section>
@@ -98,34 +182,78 @@
             <ul>
                 <li class="nav-link"><a href="index.html" aria-current="page">Home</a></li>
                 <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a href="projects.html">Projects</a></li>
                 <li class="nav-link"><a href="about.html">About</a></li>
                 <li class="nav-link"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <hr class="line-break-footer">
-        <div class="footer-text">
-            <div class="footer-left">
-                <img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="WC Logo" loading="lazy" width="400" height="400">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="footer-logo-link" href="index.html"><img class="footer-logo" src="Images/site/WC_NewLogo.webp" alt="Will Clevenger - Home" loading="lazy" width="400" height="400"></a>
                 <p class="footer-name">Will Clevenger</p>
-                <br>
-                <p class="footer-role">3D Artist</p>
-                <br>
-                <br>
+                <p class="footer-role">3D Artist &amp; Web Developer</p>
+                <p class="footer-blurb">Environment art, props, VFX and lighting for games, plus the occasional website.</p>
             </div>
-            <div class="footer-right">
-                <h2 class="footer-bold">Contact</h2>
-                <br>
+            <div class="footer-contact">
+                <h2 class="footer-heading">Get in Touch</h2>
                 <p class="footer-italic"><a href="mailto:williamzc3@gmail.com">williamzc3@gmail.com</a></p>
+                <a class="footer-cta" href="contact.html">Let's work together <span aria-hidden="true">&rarr;</span></a>
                 <div class="footer-social">
-                <ul>
-                    <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
-                    <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+                    <ul>
+                        <li class="footer-social-icon"><a href="https://www.linkedin.com/in/willclevenger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://www.artstation.com/williamzc3" target="_blank" rel="noopener noreferrer" aria-label="ArtStation"><i class="fa-brands fa-artstation"></i></a></li>
+                        <li class="footer-social-icon"><a href="https://github.com/IamWill-C" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="footer-social-icon"><a href="files/Will-Clevenger-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume"><i class="fa-solid fa-file-pdf"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-        </div>    
+        </div>
+        <hr class="line-break-footer footer-bottom-line">
+        <p class="footer-copyright">&copy; 2026 Will Clevenger. All rights reserved.</p>
     </footer>
+    <script>
+        // Data for the homepage hero carousel: one representative piece from every project across
+        // the portfolio. Each href points at that project's accordion on its category page (see
+        // openAccordionFromHash in script.js), so "View This Piece" lands right on the artwork.
+        window.HERO_CAROUSEL_ITEMS = [
+            { title: "Pirate Cutlass", category: "Prop Modeling", img: "Images/Renders/PropArt/Cutlass/CutlassRender_Beauty001.webp", alt: "Render of the Pirate Cutlass, a curved blade with a brown wrapped grip and hand guard, lit against a dark grey backdrop", href: "prop-modeling.html#pirate-cutlass" },
+            { title: "Candy Weapons", category: "Prop Modeling", img: "Images/Renders/PropArt/CandyWeapons/CandyWeapons_Hero.webp", alt: "A red and white swirled peppermint shield leaning against a candy cane handled sword in a snowy stone scene", href: "prop-modeling.html#candy-weapons" },
+            { title: "Rusted Armor", category: "Prop Modeling", img: "Images/Renders/PropArt/RustedArmor/RustedArmor_Hero.webp", alt: "A pile of rusted Norse-style armor: horned helms, bracers and pauldrons with worn metal and cloth wraps", href: "prop-modeling.html#rusted-armor" },
+            { title: "Magic Potion", category: "Prop Modeling", img: "Images/Renders/PropArt/MagicPotion/MagicPotion_Hero.webp", alt: "Five glowing teal potion bottles with orange liquid resting on a mossy rock in a dark scene", href: "prop-modeling.html#magic-potion" },
+            { title: "Thor Totem", category: "Prop Modeling", img: "Images/Renders/PropArt/ThorTotem/ThorTotemRender_Scene001.webp", alt: "Render of the Thor Totem, a carved white stone bust of a helmeted, bearded Thor with a hammer at its base, on a dark studio backdrop", href: "prop-modeling.html#thor-totem" },
+            { title: "Steampunk Scooter", category: "Prop Modeling", img: "Images/Renders/PropArt/SteampunkScooter/SteampunkScooterRender_Scene001.webp", alt: "Render of the Steampunk Scooter, a yellow riveted scooter with a red seat, round headlamp and a torpedo-shaped tank at the rear", href: "prop-modeling.html#steampunk-scooter" },
+            { title: "Steampunk Carriage", category: "Prop Modeling", img: "Images/Renders/PropArt/SteampunkCarriage/SteampunkCarriageRender_Scene001.webp", alt: "Render of the Steampunk Carriage, a yellow open carriage with a quilted red seat, curved roof, brass lamps and a horizontal tank on the hood", href: "prop-modeling.html#steampunk-carriage" },
+            { title: "Pandora's Party Box Props", category: "Prop Modeling", img: "Images/Renders/PandorasPartyBox/Deck/Prop_Chalices_Hero.webp", alt: "Four dark marble chalices with gold rims and Greek key patterns, made for Pandora's Party Box", href: "prop-modeling.html#pandoras-party-box-props" },
+
+            { title: "Mushroom House", category: "Environment Art", img: "Images/Renders/EnvironmentArt/MushroomHouse/MushroomHouse_Hero.webp", alt: "Render of the Mushroom House, a stylized house with a red spotted mushroom cap roof in a sunny meadow with trees", href: "environment-art.html#mushroom-house" },
+            { title: "Garden Shed", category: "Environment Art", img: "Images/Renders/EnvironmentArt/GardenShed/GardenShed_Hero.webp", alt: "Render of Garden S.H.E.D., a weathered octagonal shed with louvered wood walls, a round window and a paneled dome roof, on a dark backdrop", href: "environment-art.html#garden-shed" },
+            { title: "Shot Guesser", category: "Environment Art", img: "Images/Renders/PandorasPartyBox/Deck/SG_BarCounter_Hero.webp", alt: "Shot Guesser tavern bar with barrels, shelves of bottles and a long wooden counter", href: "environment-art.html#shot-guesser" },
+            { title: "Leopard Tug", category: "Environment Art", img: "Images/Renders/PandorasPartyBox/Deck/LT_Arcade_Hero.webp", alt: "Leopard Tug stone arcade with warm light along a cobbled path and iron gates in the distance", href: "environment-art.html#leopard-tug" },
+            { title: "Hera Chase", category: "Environment Art", img: "Images/Renders/PandorasPartyBox/Deck/HC_TavernWide_Hero.webp", alt: "Hera Chase tavern floor with rugs, tables, barrels and lanterns seen from above", href: "environment-art.html#hera-chase" },
+            { title: "Grape Stomp", category: "Environment Art", img: "Images/Renders/PandorasPartyBox/Deck/GS_Vineyard_Hero.webp", alt: "Grape Stomp vineyard with a wooden stomping stage in front of terraced hills and mountains", href: "environment-art.html#grape-stomp" },
+
+            { title: "Light Reforged VFX", category: "VFX Art", img: "Images/Renders/LightReforgedVFX/LR_Hero.webp", alt: "Three cannons on a tiled platform, one wreathed in flames, one with green energy sparks and one with a blue frosted glow", href: "vfx-art.html#light-reforged-vfx" },
+            { title: "VFX Showcase Reel", category: "VFX Art", img: "Images/Renders/VFX/VFXShowcase/VFXShowcase_Hero.webp", alt: "A green magic portal glowing at the end of a dim subway tunnel with a train visible inside it", href: "vfx-art.html#vfx-showcase-reel" },
+            { title: "Chaos Cloth Simulation", category: "VFX Art", img: "Images/Renders/VFX/ChaosSim/ChaosSim_Hero.webp", alt: "A silver mannequin running through a ruined stone courtyard toward a group of armored characters", href: "vfx-art.html#chaos-cloth-simulation" },
+            { title: "Chaos Destruction", category: "VFX Art", img: "Images/Renders/VFX/Destruction/Destruction_Hero.webp", alt: "A first-person view of a ruined stone fortress with stairs, arches and rocky cliffs", href: "vfx-art.html#chaos-destruction" },
+            { title: "Lobby", category: "VFX Art", img: "Images/Renders/PandorasPartyBox/Lobby/Lobby_Hero.webp", alt: "Pandora's Party Box lobby, a marble platform with flaming braziers and a glowing golden box among white columns", href: "vfx-art.html#lobby" },
+            { title: "Shot Guesser VFX", category: "VFX Art", img: "Images/Renders/PandorasPartyBox/Posters/SG_Poof_Hero.webp", alt: "A purple magic puff above the Shot Guesser tavern bar", href: "vfx-art.html#shot-guesser" },
+            { title: "Grape Stomp VFX", category: "VFX Art", img: "Images/Renders/PandorasPartyBox/GrapeStomp/GrapeStomp_Hero.webp", alt: "Grape Stomp vineyard with four player characters stomping grapes in barrels on a wooden stage", href: "vfx-art.html#grape-stomp" },
+            { title: "Leopard Tug VFX", category: "VFX Art", img: "Images/Renders/PandorasPartyBox/Posters/LT_CollectionVortex_Hero.webp", alt: "Red and blue collection vortex effects spinning above two open crates on a stone path", href: "vfx-art.html#leopard-tug" },
+            { title: "Hera Chase VFX", category: "VFX Art", img: "Images/Renders/PandorasPartyBox/Posters/HC_IntroFog_Hero.webp", alt: "Hera standing in a backlit doorway as white fog rolls across a tavern floor", href: "vfx-art.html#hera-chase" },
+
+            { title: "Shot Guesser Lighting", category: "Lighting Art", img: "Images/Renders/PandorasPartyBox/Deck/SG_TavernWindow_Hero.webp", alt: "Warm light from a window and wall lanterns falling across a wooden table in the Shot Guesser tavern", href: "lighting-art.html#shot-guesser" },
+            { title: "Leopard Tug Lighting", category: "Lighting Art", img: "Images/Renders/PandorasPartyBox/Deck/LT_Vista_Hero.webp", alt: "A low golden sun breaking through clouds over a hillside and mountain seen past a tiled rooftop", href: "lighting-art.html#leopard-tug" },
+            { title: "Grape Stomp Lighting", category: "Lighting Art", img: "Images/Renders/PandorasPartyBox/Deck/GS_Vineyard_Hero.webp", alt: "Soft daylight over the Grape Stomp vineyard with hills and mountains behind the wooden stage", href: "lighting-art.html#grape-stomp" },
+            { title: "Hera Intro Cutscene", category: "Lighting Art", img: "Images/Renders/PandorasPartyBox/HeraCutscene/HeraCutscene_Hero.webp", alt: "Hera standing in a backlit doorway as fog rolls across the floor of a tavern", href: "lighting-art.html#hera-intro-cutscene" },
+
+            { title: "Original Bug Games", category: "Web Projects", img: "Images/Renders/WebProjects/OriginalBugGames/OBG_Hero.webp", alt: "Homepage of the Original Bug Games website, with the green bubble-letter logo, navigation, the headline The City is a Garden and a Steam wishlist button", href: "web-projects.html#original-bug-games" },
+            { title: "Hahn's Gymnastics", category: "Web Projects", img: "Images/Renders/WebProjects/HahnsGymnastics/Hahns_Hero.webp", alt: "Homepage of the Hahn's Gymnastics website, showing the logo, navigation and a photo of the gym floor", href: "web-projects.html#hahns-gymnastics" },
+            { title: "Project Darkwater", category: "Web Projects", img: "Images/Renders/WebProjects/ProjectDarkwater/Darkwater_Hero.webp", alt: "Homepage of the Project Darkwater website, with a carved wood header, gold headline, parchment overview card and a red Play button on a dark blue background", href: "web-projects.html#project-darkwater" },
+            { title: "This Portfolio", category: "Web Projects", img: "Images/Renders/WebProjects/Portfolio/Portfolio_Hero.webp", alt: "Homepage of this portfolio site, with the WC logo, navigation, tagline and four project tiles on a cyan background", href: "web-projects.html#this-portfolio" }
+        ];
+    </script>
     <script src="js/script.js"></script>
     </body>
 </html>
