@@ -7,7 +7,8 @@
 }*/
 
 :root {
-    --header-h: 206px;
+    /* Fallback only: script.js replaces this with the header's measured height */
+    --header-h: 117px;
 
     --bg-top: #92f1ff;
     --bg-bottom: #008192;
@@ -146,7 +147,7 @@ h4 {
     border: 2px solid var(--accent);
     border-radius: 5px;
     color: var(--accent);
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 /* Header height changes on small screens (used by the sticky sub-nav offsets) */
@@ -184,4 +185,41 @@ h4 {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* 404 page */
+.not-found {
+    max-width: 760px;
+    width: calc(100% - 32px);
+    margin: 40px auto;
+    padding: 40px 24px;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--glass);
+    border-radius: 16px;
+}
+
+.not-found .not-found-code {
+    margin: 0;
+    font-family: video-light, sans-serif;
+    font-size: clamp(90px, 22vw, 180px);
+    line-height: 1;
+    color: var(--accent);
+    text-shadow: 0 0 24px rgba(146, 241, 255, 0.6), 4px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+.not-found h1 {
+    margin: 10px 0 14px;
+    font-size: clamp(30px, 6vw, 44px);
+}
+
+.not-found p {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.not-found-links {
+    justify-content: center;
+    margin-top: 26px;
 }

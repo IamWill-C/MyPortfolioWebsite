@@ -123,6 +123,28 @@ if (form) {
     });
 }
 
+// The header's height depends on screen width and font loading, so it is measured and shared with CSS
+// instead of trusting the --header-h fallback in base.css. The sticky sub-nav sits right below it.
+const siteNav = document.querySelector('.site-nav');
+if (siteNav) {
+    new ResizeObserver(() => {
+        document.documentElement.style.setProperty('--header-h', siteNav.offsetHeight + 'px');
+        // The full height is what the fixed desktop header reserves at the top of the page (see layout.css)
+        if (!siteNav.classList.contains('compact')) {
+            document.documentElement.style.setProperty('--header-full', siteNav.offsetHeight + 'px');
+        }
+    }).observe(siteNav);
+
+    // Shrink the header once the reader scrolls down, so more of the page shows (desktop only, see layout.css).
+    // Two thresholds stop it flickering when the page sits right at the edge.
+    const syncCompactHeader = () => {
+        if (window.scrollY > 80) siteNav.classList.add('compact');
+        else if (window.scrollY < 20) siteNav.classList.remove('compact');
+    };
+    syncCompactHeader();
+    window.addEventListener('scroll', syncCompactHeader, { passive: true });
+}
+
 // Accordion
 // The sub-nav can wrap onto two rows on small screens, so its real height is measured and shared with CSS.
 // An open accordion's title bar sticks just below it (see .accordion-btn.open in project.css), and the
@@ -198,6 +220,9 @@ document.querySelectorAll('.accordion-btn').forEach((btn, i) => {
         if (btn.nextElementSibling.classList.contains('open')) closeAccordion(btn);
         else setAccordion(btn, true);
     });
+    // The preview under a closed project opens it too (the title bar stays the keyboard control)
+    const preview = btn.parentElement.querySelector('.accordion-preview');
+    if (preview) preview.addEventListener('click', () => setAccordion(btn, true));
 });
 
 // Deep link: a URL ending in #some-project (e.g. from the homepage carousel) opens that

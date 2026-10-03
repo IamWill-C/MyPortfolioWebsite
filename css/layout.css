@@ -806,3 +806,210 @@
         font-size: 24px;
         line-height: 1;
     }
+
+/* Phones: a smaller logo keeps the sticky header from taking over the screen */
+@media (max-width: 768px) {
+    .logo img {
+        width: 84px;
+        padding: 8px;
+    }
+
+    .hamburger {
+        top: 22px;
+        right: 16px;
+        width: 46px;
+        height: 46px;
+    }
+}
+
+/* Phones: leave room for the "Resume" note and arrow, which hang below and to the left of the PDF icon */
+@media (max-width: 1080px) {
+    .social.open {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Smaller note and arrow, so they fit to the left of the PDF icon without running off the screen */
+    .footer-social ul {
+        padding-bottom: 50px;
+    }
+
+    .footer-social-icon a[aria-label="Resume"]::before {
+        right: 81px;
+        margin-top: 25px;
+        font-size: 22px;
+    }
+
+    .footer-social-icon a[aria-label="Resume"]::after {
+        right: -25px;
+        width: 130px;
+        height: 49px;
+        margin-top: -7px;
+    }
+}
+
+/* Desktop: a more compact header, so it takes less of the screen (the sticky sub-nav sits under it) */
+@media (min-width: 1081px) {
+    .logo img {
+        width: 88px;
+        padding: 8px 10px;
+    }
+
+    .nav-link {
+        font-size: 28px;
+    }
+
+    .nav-link a {
+        padding: 12px 14px;
+    }
+
+    .social-icon {
+        font-size: 32px;
+        padding: 8px;
+    }
+
+    .social {
+        padding-bottom: 44px;
+    }
+
+    /* The "Resume" note and arrow, scaled to about three quarters to match the smaller icons */
+    .social-icon a[aria-label="Resume"]::before {
+        right: 90px;
+        margin-top: 28px;
+        font-size: 25px;
+    }
+
+    .social-icon a[aria-label="Resume"]::after {
+        right: -28px;
+        width: 146px;
+        height: 55px;
+        margin-top: -7px;
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1200px) {
+    .nav-link {
+        font-size: 25px;
+    }
+}
+
+/* Desktop: the header is fixed rather than sticky, so it can shrink on scroll (.compact, set by script.js)
+   without moving the page under it. The body keeps room for its full height. */
+@media (min-width: 1081px) {
+    body {
+        padding-top: var(--header-full, 117px);
+    }
+
+    .site-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+
+    .site-nav.compact .logo img {
+        width: 52px;
+        padding: 6px 10px;
+    }
+
+    .site-nav.compact .nav-link {
+        font-size: 24px;
+    }
+
+    .site-nav.compact .nav-link a {
+        padding: 8px 14px;
+    }
+
+    .site-nav.compact .social {
+        padding-bottom: 0;
+    }
+
+    .site-nav.compact .social-icon {
+        font-size: 26px;
+        padding: 6px;
+    }
+
+    .site-nav.compact .social-icon a[aria-label="Resume"]::before,
+    .site-nav.compact .social-icon a[aria-label="Resume"]::after {
+        display: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .logo img,
+        .nav-link,
+        .social-icon {
+            transition: width 0.2s ease, padding 0.2s ease, font-size 0.2s ease, transform 0.3s ease, filter 0.3s ease;
+        }
+    }
+}
+
+/* Phones: the footer nav wraps onto a couple of short rows instead of a tall stacked list */
+@media (max-width: 600px) {
+    .footer-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px 6px;
+        padding: 10px 0;
+    }
+
+    .footer-nav .nav-link {
+        font-size: 18px;
+    }
+
+    .footer-nav .nav-link a {
+        padding: 8px 10px;
+    }
+
+    .footer-nav ul li a::after {
+        left: 10px;
+        right: 10px;
+        bottom: 3px;
+    }
+}
+
+/* "Available for work" badge (homepage hero and contact page) */
+    .availability {
+        display: inline-flex;
+        white-space: nowrap;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+        padding: 10px 22px;
+        font-family: Montserrat, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        background: rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent);
+        border-radius: 999px;
+        color: inherit;
+        text-decoration: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .availability:hover,
+    .availability:focus-visible {
+        background: rgba(0, 0, 0, 0.35);
+        transform: translateY(-3px) scale(1.06) rotate(-3deg);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 16px rgba(146, 241, 255, 0.5);
+    }
+
+    .availability:active {
+        transform: translateY(-1px) scale(0.98) rotate(-1deg);
+    }
+
+    .availability-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #4ade80;
+        flex-shrink: 0;
+        animation: availability-pulse 2s ease-out infinite;
+    }
+
+    @keyframes availability-pulse {
+        0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+        70%, 100% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+    }
