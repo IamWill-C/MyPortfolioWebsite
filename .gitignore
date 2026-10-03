@@ -3,3 +3,6 @@ _original-images/
 
 # Files not currently used by the site, kept locally (mirrors Images/ paths so they can be moved back)
 _unused/
+
+# Local editor/tool settings (not part of the site)
+.claude/

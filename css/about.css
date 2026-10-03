@@ -66,7 +66,9 @@
     }
 
     .skills-experience-divider {
-        height: 300px;
+        align-self: stretch;
+        height: auto;
+        margin: 0 10px;
         width: 1px;
         border: 1px solid var(--accent);
         border-radius: 5px;
@@ -82,9 +84,40 @@
         line-height: 1.6;
     }
 
+    /* Experience reads as a timeline: a cyan rail with a dot at each role, and the dates muted under it */
+    .experience-list ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style: none;
+        border-left: 2px solid rgba(146, 241, 255, 0.5);
+    }
+
+    .experience-list ul li:not(.experience-date) {
+        position: relative;
+        font-weight: 600;
+        margin-top: 12px;
+    }
+
+    .experience-list ul li:first-child {
+        margin-top: 0;
+    }
+
+    .experience-list ul li:not(.experience-date)::before {
+        content: '';
+        position: absolute;
+        left: -27px;
+        top: 0.55em;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 8px var(--accent);
+    }
+
     .experience-date {
         font-style: italic;
-        padding-left: 10px;
+        font-size: 14px;
+        opacity: 0.8;
     }
 
     /* Education's own panel needs more room at the bottom so its text isn't cramped against the rounded corner */
@@ -117,10 +150,10 @@
     }
 
     .about-line-break {
-        border: 2px solid var(--panel);
+        width: min(600px, 60%);
+        border: 1px solid rgba(146, 241, 255, 0.5);
         border-radius: 5px;
-        color: var(--panel);
-        margin: 20px 0;
+        margin: 28px auto;
     }
 
     .hobbies-list {
@@ -183,4 +216,42 @@
         font-size: 16px;
         font-style: italic;
         padding-top: 20px;
+    }
+
+/* Smaller screens: Skills and Experience stack instead of squeezing into two narrow columns */
+    @media (max-width: 768px) {
+        .skills-experience-grid {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .skills-experience-divider {
+            display: none;
+        }
+
+        .about-skills {
+            padding-right: 0;
+        }
+    }
+
+/* Phones: pets two to a row with smaller name tags */
+    @media (max-width: 600px) {
+        .cat-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .cat-pic {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            border-width: 3px;
+            border-radius: 18px;
+        }
+
+        .cat-item p {
+            font-size: 20px;
+            border-width: 2px;
+        }
     }
